@@ -14,7 +14,7 @@
 
 <nav class="toc">
 <a href="#start">Premiers pas</a><a href="#panel">Panneau de la barre des menus</a><a href="#drop">Glisser pour envoyer</a><a href="#local">Dossiers locaux</a>
-<a href="#context">Menu contextuel du Finder</a><a href="#search">Recherche de fichiers</a><a href="#logs">Journaux en direct</a><a href="#terminal">Terminal</a>
+<a href="#context">Menu contextuel du Finder</a><a href="#vault">Coffres-forts</a><a href="#search">Recherche de fichiers</a><a href="#logs">Journaux en direct</a><a href="#terminal">Terminal</a>
 <a href="#permissions">Autorisations</a><a href="#pro">Gratuit et Pro</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
 </nav>
 
@@ -98,6 +98,20 @@ Moorly fonctionne aussi avec des dossiers déjà présents sur votre Mac, comme 
 </table>
 <p class="muted">Si une action n’est pas disponible pour ce type de serveur, Moorly vous en indique la raison.</p>
 
+<h2 id="vault">Coffres-forts Cryptomator (dossiers chiffrés)</h2>
+<p>Les fichiers sont chiffrés sur ce Mac avant d’être envoyés. Le serveur ne stocke que des noms et des contenus illisibles : ni votre fournisseur cloud, ni l’administrateur du serveur, ni quelqu’un qui volerait votre compte ne peut les lire. Les coffres utilisent le format Cryptomator standard, donc les apps Cryptomator (Windows, iPhone, Android) peuvent ouvrir le même coffre.</p>
+<ol>
+<li>Dans le panneau, cliquez sur <b>…</b> à côté d’un serveur › <b>Coffre-fort Cryptomator…</b> (ou <b>…</b> › <b>Ouvrir ou créer un coffre-fort Cryptomator…</b> dans la fenêtre des connexions).</li>
+<li><b>Ouvrir un coffre existant</b> : indiquez le dossier du coffre (celui qui contient <code>vault.cryptomator</code>) et son mot de passe. <b>Créer un coffre</b> : indiquez un dossier et un mot de passe d’au moins 8 caractères.</li>
+<li>Le coffre apparaît dans le Finder comme une connexion à part. À l’intérieur, ouvrez et enregistrez comme dans n’importe quel dossier.</li>
+</ol>
+<div class="tip"><b>Si vous oubliez le mot de passe, personne (pas même Moorly) ne pourra récupérer vos fichiers.</b> Notez-le en lieu sûr. La clé du coffre est conservée dans le trousseau de ce Mac, vous n’avez pas à la ressaisir.</div>
+<ul>
+<li>Les noms et les contenus sont masqués. Le nombre de fichiers, leur taille approximative et leurs dates de modification restent visibles sur le serveur.</li>
+<li>La compression côté serveur, les liens de partage et les journaux en direct ne sont pas disponibles dans un coffre (le serveur ne peut pas lire les fichiers).</li>
+<li>Format pris en charge : coffre Cryptomator format 8 avec AES-GCM (réglage par défaut actuel de Cryptomator).</li>
+</ul>
+
 <h2 id="search">Recherche de fichiers</h2>
 <img class="shot" src="../img/fr-2-search.jpg" alt="Fenêtre de recherche de fichiers">
 <p>Cliquez sur 🔍 dans le panneau de la barre des menus, ou appuyez sur <kbd>⌃⌥⌘F</kbd> depuis n’importe où. Les fichiers sont trouvés par leur nom, même dans des dossiers que vous n’avez jamais ouverts.</p>
@@ -139,7 +153,7 @@ Moorly fonctionne aussi avec des dossiers déjà présents sur votre Mac, comme 
 <p class="muted">Si vous avez refusé, modifiez ce choix dans <b>Réglages Système › Confidentialité et sécurité › Automatisation</b>.</p>
 
 <h2 id="pro">Gratuit et Pro</h2>
-<p>La version gratuite inclut toutes les fonctionnalités, avec une connexion de chaque type (SFTP, FTP, WebDAV, S3, OneDrive, Dropbox), un dossier local et une surveillance de journal. Un achat intégré unique, <b>Moorly Pro</b>, supprime ces limites : connexions, dossiers locaux et surveillances de journaux illimités.</p>
+<p>La version gratuite inclut toutes les fonctionnalités, avec une connexion de chaque type (SFTP, FTP, WebDAV, S3, OneDrive, Dropbox), un dossier local, une surveillance de journal et un coffre-fort Cryptomator. Un achat intégré unique, <b>Moorly Pro</b>, supprime ces limites : connexions, dossiers locaux, surveillances de journaux et coffres-forts illimités.</p>
 
 <h2 id="faq">FAQ</h2>
 <h3>L’enregistrement d’une connexion OneDrive indique «&nbsp;Ce compte ne dispose pas de OneDrive&nbsp;»</h3>

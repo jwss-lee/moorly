@@ -14,7 +14,7 @@
 
 <nav class="toc">
 <a href="#start">Primeros pasos</a><a href="#panel">Panel de la barra de menús</a><a href="#drop">Arrastrar para subir</a><a href="#local">Carpetas locales</a>
-<a href="#context">Menú de función rápida del Finder</a><a href="#search">Búsqueda de archivos</a><a href="#logs">Registros en vivo</a><a href="#terminal">Terminal</a>
+<a href="#context">Menú de función rápida del Finder</a><a href="#vault">Bóvedas</a><a href="#search">Búsqueda de archivos</a><a href="#logs">Registros en vivo</a><a href="#terminal">Terminal</a>
 <a href="#permissions">Permisos</a><a href="#pro">Gratis y Pro</a><a href="#faq">Preguntas frecuentes</a><a href="#contact">Contacto</a>
 </nav>
 
@@ -98,6 +98,20 @@ También puede trabajar con carpetas que ya están en tu Mac, como iCloud Drive 
 </table>
 <p class="muted">Si una acción no está disponible para el tipo de servidor, Moorly te indica el motivo.</p>
 
+<h2 id="vault">Bóvedas de Cryptomator (carpetas cifradas)</h2>
+<p>Los archivos se cifran en este Mac antes de subirse. El servidor solo guarda nombres y contenidos ilegibles, así que ni tu proveedor en la nube, ni el administrador del servidor, ni quien robe tu cuenta puede verlos. Las bóvedas usan el formato estándar de Cryptomator, por lo que las apps de Cryptomator (Windows, iPhone, Android) pueden abrir la misma bóveda.</p>
+<ol>
+<li>En el panel, haz clic en <b>…</b> junto a un servidor › <b>Bóveda de Cryptomator…</b> (o <b>…</b> › <b>Abrir o crear bóveda de Cryptomator…</b> en la ventana de conexiones).</li>
+<li><b>Abrir bóveda existente</b>: introduce la carpeta de la bóveda (la que contiene <code>vault.cryptomator</code>) y su contraseña. <b>Crear bóveda nueva</b>: introduce una carpeta y una contraseña de al menos 8 caracteres.</li>
+<li>La bóveda aparece en el Finder como una conexión propia. Dentro, abre y guarda archivos como en cualquier carpeta.</li>
+</ol>
+<div class="tip"><b>Si olvidas la contraseña, nadie (ni siquiera Moorly) podrá recuperar tus archivos.</b> Apúntala en un lugar seguro. La clave de la bóveda se guarda en el llavero de este Mac, así que no tienes que volver a escribirla.</div>
+<ul>
+<li>Se ocultan los nombres y el contenido. El número de archivos, su tamaño aproximado y la fecha de modificación siguen visibles en el servidor.</li>
+<li>Dentro de una bóveda no se puede comprimir en el servidor ni usar enlaces para compartir o registros en directo (el servidor no puede leer los archivos).</li>
+<li>Compatible con: bóvedas de Cryptomator formato 8 con AES-GCM (el valor predeterminado actual de Cryptomator).</li>
+</ul>
+
 <h2 id="search">Búsqueda de archivos</h2>
 <img class="shot" src="../img/es-2-search.jpg" alt="Ventana de búsqueda de archivos">
 <p>Haz clic en 🔍 en el panel de la barra de menús o pulsa <kbd>⌃⌥⌘F</kbd> desde cualquier lugar. Encuentra archivos por su nombre incluso en carpetas que no has abierto.</p>
@@ -139,7 +153,7 @@ También puede trabajar con carpetas que ya están en tu Mac, como iCloud Drive 
 <p class="muted">Si lo rechazaste, cámbialo en <b>Ajustes del Sistema › Privacidad y seguridad › Automatización</b>.</p>
 
 <h2 id="pro">Gratis y Pro</h2>
-<p>La versión gratuita incluye todas las funciones con una conexión de cada tipo (SFTP, FTP, WebDAV, S3, OneDrive, Dropbox), una carpeta local y una vigilancia de registros. Una compra única dentro de la app, <b>Moorly Pro</b>, elimina estos límites: conexiones, carpetas locales y vigilancias de registros ilimitadas.</p>
+<p>La versión gratuita incluye todas las funciones con una conexión de cada tipo (SFTP, FTP, WebDAV, S3, OneDrive, Dropbox), una carpeta local, una vigilancia de registros y una bóveda de Cryptomator. Una compra única dentro de la app, <b>Moorly Pro</b>, elimina estos límites: conexiones, carpetas locales, vigilancias de registros y bóvedas ilimitadas.</p>
 
 <h2 id="faq">Preguntas frecuentes</h2>
 <h3>Al guardar una conexión de OneDrive aparece “Esta cuenta no tiene OneDrive”</h3>

@@ -14,7 +14,7 @@
 
 <nav class="toc">
 <a href="#start">Primeiros passos</a><a href="#panel">Painel da barra de menus</a><a href="#drop">Arrastar para enviar</a><a href="#local">Pastas locais</a>
-<a href="#context">Menu de atalhos do Finder</a><a href="#search">Busca de arquivos</a><a href="#logs">Logs ao vivo</a><a href="#terminal">Terminal</a>
+<a href="#context">Menu de atalhos do Finder</a><a href="#vault">Cofres</a><a href="#search">Busca de arquivos</a><a href="#logs">Logs ao vivo</a><a href="#terminal">Terminal</a>
 <a href="#permissions">Permissões</a><a href="#pro">Gratuito e Pro</a><a href="#faq">Perguntas frequentes</a><a href="#contact">Contato</a>
 </nav>
 
@@ -98,6 +98,20 @@ Ele também funciona com pastas que já estão no seu Mac, como o iCloud Drive o
 </table>
 <p class="muted">Se uma ação não estiver disponível para o tipo de servidor, o Moorly explica o motivo.</p>
 
+<h2 id="vault">Cofres do Cryptomator (pastas criptografadas)</h2>
+<p>Os arquivos são criptografados neste Mac antes de serem enviados. O servidor guarda apenas nomes e conteúdos ilegíveis, então nem seu provedor de nuvem, nem o administrador do servidor, nem quem roubar sua conta consegue vê-los. Os cofres usam o formato padrão do Cryptomator, por isso os apps do Cryptomator (Windows, iPhone, Android) abrem o mesmo cofre.</p>
+<ol>
+<li>No painel, clique em <b>…</b> ao lado de um servidor › <b>Cofre do Cryptomator…</b> (ou <b>…</b> › <b>Abrir ou Criar Cofre do Cryptomator…</b> na janela de conexões).</li>
+<li><b>Abrir Cofre Existente</b>: informe a pasta do cofre (a que contém <code>vault.cryptomator</code>) e a senha. <b>Criar Cofre Novo</b>: informe uma pasta e uma senha de pelo menos 8 caracteres.</li>
+<li>O cofre aparece no Finder como uma conexão própria. Dentro dele, abra e salve arquivos como em qualquer pasta.</li>
+</ol>
+<div class="tip"><b>Se você esquecer a senha, ninguém (nem o Moorly) poderá recuperar seus arquivos.</b> Anote-a em um lugar seguro. A chave do cofre fica nas Chaves deste Mac, então você não precisa digitá-la de novo.</div>
+<ul>
+<li>Nomes e conteúdos ficam ocultos. A quantidade de arquivos, o tamanho aproximado e as datas de modificação continuam visíveis no servidor.</li>
+<li>Dentro de um cofre não há compactação no servidor, links de compartilhamento nem logs em tempo real (o servidor não consegue ler os arquivos).</li>
+<li>Compatível com: cofres do Cryptomator formato 8 com AES-GCM (padrão atual do Cryptomator).</li>
+</ul>
+
 <h2 id="search">Busca de arquivos</h2>
 <img class="shot" src="../img/pt-BR-2-search.jpg" alt="Janela de busca de arquivos">
 <p>Clique em 🔍 no painel da barra de menus ou pressione <kbd>⌃⌥⌘F</kbd> em qualquer lugar. Encontra arquivos pelo nome mesmo em pastas que você ainda não abriu.</p>
@@ -139,7 +153,7 @@ Ele também funciona com pastas que já estão no seu Mac, como o iCloud Drive o
 <p class="muted">Se você recusou, altere em <b>Ajustes do Sistema › Privacidade e Segurança › Automação</b>.</p>
 
 <h2 id="pro">Gratuito e Pro</h2>
-<p>A versão gratuita inclui todos os recursos, com uma conexão de cada tipo (SFTP, FTP, WebDAV, S3, OneDrive, Dropbox), uma pasta local e um monitoramento de log. Uma compra única do <b>Moorly Pro</b> dentro do app remove esses limites: conexões, pastas locais e monitoramentos de log ilimitados.</p>
+<p>A versão gratuita inclui todos os recursos, com uma conexão de cada tipo (SFTP, FTP, WebDAV, S3, OneDrive, Dropbox), uma pasta local, um monitoramento de log e um cofre do Cryptomator. Uma compra única do <b>Moorly Pro</b> dentro do app remove esses limites: conexões, pastas locais, monitoramentos de log e cofres ilimitados.</p>
 
 <h2 id="faq">Perguntas frequentes</h2>
 <h3>Ao salvar uma conexão do OneDrive, aparece “Esta conta não tem um OneDrive”</h3>

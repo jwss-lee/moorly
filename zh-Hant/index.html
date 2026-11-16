@@ -14,7 +14,7 @@
 
 <nav class="toc">
 <a href="#start">開始使用</a><a href="#panel">選單列面板</a><a href="#drop">拖移以上傳</a><a href="#local">本機檔案夾</a>
-<a href="#context">Finder 快速鍵選單</a><a href="#search">檔案搜尋</a><a href="#logs">即時日誌</a><a href="#terminal">終端機</a>
+<a href="#context">Finder 快速鍵選單</a><a href="#vault">保險庫</a><a href="#search">檔案搜尋</a><a href="#logs">即時日誌</a><a href="#terminal">終端機</a>
 <a href="#permissions">權限</a><a href="#pro">免費版與 Pro 版</a><a href="#faq">常見問題</a><a href="#contact">聯絡我們</a>
 </nav>
 
@@ -98,6 +98,20 @@
 </table>
 <p class="muted">如果某個動作不適用於該伺服器類型，Moorly 會告訴你原因。</p>
 
+<h2 id="vault">Cryptomator 保險庫（加密檔案夾）</h2>
+<p>檔案會先在這台 Mac 上加密再上傳。伺服器只會儲存無法辨識的名稱與內容，因此雲端業者、伺服器管理員或盜用你帳號的人都看不到內容。保險庫採用標準 Cryptomator 格式，Cryptomator App（Windows、iPhone、Android）也能開啟同一個保險庫。</p>
+<ol>
+<li>在面板中按一下伺服器旁的 <b>…</b> › <b>Cryptomator 保險庫⋯</b>（或在連線視窗中按 <b>…</b> › <b>開啟或建立 Cryptomator 保險庫⋯</b>）。</li>
+<li><b>開啟現有保險庫</b>：輸入保險庫檔案夾（含有 <code>vault.cryptomator</code> 的檔案夾）與密碼。<b>建立新保險庫</b>：輸入要建立的檔案夾與至少 8 個字元的密碼。</li>
+<li>保險庫會以獨立連線出現在 Finder 中。在裡面就像一般檔案夾一樣開啟和儲存。</li>
+</ol>
+<div class="tip"><b>忘記密碼的話，任何人（包括 Moorly）都無法救回檔案。</b>請把密碼記在安全的地方。保險庫金鑰會保存在這台 Mac 的鑰匙圈中，不必每次輸入。</div>
+<ul>
+<li>隱藏的是檔名與內容。檔案數量、大約大小與修改時間仍可在伺服器上看到。</li>
+<li>保險庫內的檔案無法在伺服器上直接壓縮，也不能使用分享連結或即時日誌（伺服器無法讀取內容）。</li>
+<li>支援格式：Cryptomator 保險庫格式 8、AES-GCM 加密（目前 Cryptomator 的預設）。</li>
+</ul>
+
 <h2 id="search">檔案搜尋</h2>
 <img class="shot" src="../img/zh-Hant-2-search.jpg" alt="檔案搜尋視窗">
 <p>按一下選單列面板中的 🔍，或在任何地方按下 <kbd>⌃⌥⌘F</kbd>。即使是你未打開過的檔案夾，也能依名稱找到檔案。</p>
@@ -139,7 +153,7 @@
 <p class="muted">如果你先前拒絕了，請在「<b>系統設定 › 隱私權與安全性 › 自動化</b>」中更改。</p>
 
 <h2 id="pro">免費版與 Pro 版</h2>
-<p>免費版包含所有功能，每種連線類型（SFTP、FTP、WebDAV、S3、OneDrive、Dropbox）各可使用一個連線，另可使用一個本機檔案夾與一個日誌監看。一次性的「<b>Moorly Pro</b>」App 內購買可解除這些限制，連線、本機檔案夾與日誌監看數量不受限制。</p>
+<p>免費版包含所有功能，每種連線類型（SFTP、FTP、WebDAV、S3、OneDrive、Dropbox）各可使用一個連線，另可使用一個本機檔案夾與一個日誌監看與一個 Cryptomator 保險庫。一次性的「<b>Moorly Pro</b>」App 內購買可解除這些限制，連線、本機檔案夾、日誌監看與保險庫數量不受限制。</p>
 
 <h2 id="faq">常見問題</h2>
 <h3>儲存 OneDrive 連線時顯示「此帳號沒有 OneDrive」</h3>

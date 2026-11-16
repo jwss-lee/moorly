@@ -14,7 +14,7 @@
 
 <nav class="toc">
 <a href="#start">Getting started</a><a href="#panel">Menu bar panel</a><a href="#drop">Drag to upload</a><a href="#local">Local folders</a>
-<a href="#context">Finder shortcut menu</a><a href="#search">File search</a><a href="#logs">Live logs</a><a href="#terminal">Terminal</a>
+<a href="#context">Finder shortcut menu</a><a href="#vault">Vaults</a><a href="#search">File search</a><a href="#logs">Live logs</a><a href="#terminal">Terminal</a>
 <a href="#permissions">Permissions</a><a href="#pro">Free and Pro</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
 </nav>
 
@@ -98,6 +98,20 @@ It can also work with folders already on your Mac, such as iCloud Drive or a Goo
 </table>
 <p class="muted">If an action isn’t available for the server type, Moorly tells you why.</p>
 
+<h2 id="vault">Cryptomator vaults (encrypted folders)</h2>
+<p>Files are encrypted on this Mac before they're uploaded. The server only stores unreadable names and contents, so your cloud provider, the server admin or someone who steals your account can't see them. Vaults use the standard Cryptomator format, so the Cryptomator apps (Windows, iPhone, Android) can open the same vault.</p>
+<ol>
+<li>In the panel, click <b>…</b> next to a server › <b>Cryptomator Vault…</b> (or <b>…</b> › <b>Open or Create Cryptomator Vault…</b> in the connections window).</li>
+<li><b>Open Existing Vault</b>: enter the vault folder (the one containing <code>vault.cryptomator</code>) and its password. <b>Create New Vault</b>: enter a folder and a password of at least 8 characters.</li>
+<li>The vault appears in Finder as its own connection. Inside it, open and save files as in any folder.</li>
+</ol>
+<div class="tip"><b>If you forget the password, nobody (not even Moorly) can recover your files.</b> Write it down somewhere safe. The vault key is kept in this Mac's keychain, so you don't have to retype it.</div>
+<ul>
+<li>Names and contents are hidden. The number of files, their approximate sizes and modification times remain visible on the server.</li>
+<li>Server-side compress, share links and live logs aren't available inside a vault (the server can't read the files).</li>
+<li>Supported: Cryptomator vault format 8 with AES-GCM (the current Cryptomator default).</li>
+</ul>
+
 <h2 id="search">File search</h2>
 <img class="shot" src="../img/en-2-search.jpg" alt="File search window">
 <p>Click 🔍 in the menu bar panel, or press <kbd>⌃⌥⌘F</kbd> anywhere. Finds files by name even in folders you haven’t opened.</p>
@@ -139,7 +153,7 @@ It can also work with folders already on your Mac, such as iCloud Drive or a Goo
 <p class="muted">If you declined, change it in <b>System Settings › Privacy &amp; Security › Automation</b>.</p>
 
 <h2 id="pro">Free and Pro</h2>
-<p>The free version includes every feature, with one connection of each type (SFTP, FTP, WebDAV, S3, OneDrive, Dropbox), one local folder and one log watch. A one-time <b>Moorly Pro</b> in-app purchase removes these limits: unlimited connections, local folders and log watches.</p>
+<p>The free version includes every feature, with one connection of each type (SFTP, FTP, WebDAV, S3, OneDrive, Dropbox), one local folder, one log watch and one Cryptomator vault. A one-time <b>Moorly Pro</b> in-app purchase removes these limits: unlimited connections, local folders, log watches and vaults.</p>
 
 <h2 id="faq">FAQ</h2>
 <h3>Saving a OneDrive connection says “This account doesn’t have a OneDrive”</h3>

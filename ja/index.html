@@ -14,7 +14,7 @@
 
 <nav class="toc">
 <a href="#start">はじめに</a><a href="#panel">メニューバーのパネル</a><a href="#drop">ドラッグしてアップロード</a><a href="#local">ローカルフォルダ</a>
-<a href="#context">Finder のショートカットメニュー</a><a href="#search">ファイル検索</a><a href="#logs">リアルタイムログ</a><a href="#terminal">ターミナル</a>
+<a href="#context">Finder のショートカットメニュー</a><a href="#vault">金庫</a><a href="#search">ファイル検索</a><a href="#logs">リアルタイムログ</a><a href="#terminal">ターミナル</a>
 <a href="#permissions">アクセス権</a><a href="#pro">無料版と Pro</a><a href="#faq">よくある質問</a><a href="#contact">お問い合わせ</a>
 </nav>
 
@@ -98,6 +98,20 @@ iCloud Drive や Google Drive アプリのフォルダなど、Mac 上にすで�
 </table>
 <p class="muted">サーバの種類によって使用できない操作の場合は、その理由が表示されます。</p>
 
+<h2 id="vault">Cryptomator 金庫（暗号化フォルダ）</h2>
+<p>ファイルはアップロード前にこの Mac で暗号化されます。サーバには読めない名前と内容しか保存されないため、クラウド事業者やサーバ管理者、アカウントを盗んだ人にも中身は見えません。標準の Cryptomator 形式なので、Cryptomator アプリ（Windows・iPhone・Android）でも同じ金庫を開けます。</p>
+<ol>
+<li>パネルでサーバの <b>…</b> › <b>Cryptomator 金庫…</b> をクリックします（または接続ウインドウの <b>…</b> › <b>Cryptomator 金庫を開く／作成…</b>）。</li>
+<li><b>既存の金庫を開く</b>：金庫フォルダ（<code>vault.cryptomator</code> があるフォルダ）とパスワードを入力します。<b>新しい金庫を作成</b>：作成するフォルダと 8 文字以上のパスワードを入力します。</li>
+<li>金庫は別の接続として Finder に表示されます。中では普通のフォルダと同じように開いて保存できます。</li>
+</ol>
+<div class="tip"><b>パスワードを忘れると、誰も（Moorly も）ファイルを復元できません。</b>安全な場所に控えておいてください。金庫の鍵はこの Mac のキーチェーンに保存されるので、毎回入力する必要はありません。</div>
+<ul>
+<li>隠されるのはファイル名と内容です。ファイル数、おおよそのサイズ、変更日時はサーバから見えます。</li>
+<li>金庫内のファイルでは、サーバ上での圧縮・共有リンク・リアルタイムログは使えません（サーバは内容を読めないため）。</li>
+<li>対応形式：Cryptomator 金庫形式 8、AES-GCM 暗号化（現在の Cryptomator の既定）。</li>
+</ul>
+
 <h2 id="search">ファイル検索</h2>
 <img class="shot" src="../img/ja-2-search.jpg" alt="ファイル検索ウインドウ">
 <p>メニューバーのパネルで 🔍 をクリックするか、どこからでも <kbd>⌃⌥⌘F</kbd> を押します。まだ開いていないフォルダ内のファイルも、名前で検索できます。</p>
@@ -139,7 +153,7 @@ iCloud Drive や Google Drive アプリのフォルダなど、Mac 上にすで�
 <p class="muted">許可しなかった場合は、<b>システム設定 › プライバシーとセキュリティ › オートメーション</b>で変更できます。</p>
 
 <h2 id="pro">無料版と Pro</h2>
-<p>無料版では、接続の種類（SFTP、FTP、WebDAV、S3、OneDrive、Dropbox）ごとに 1 件、ローカルフォルダ 1 件、ログ監視 1 件で、すべての機能を利用できます。App 内課金の <b>Moorly Pro</b>（買い切り）を購入すると、接続・ローカルフォルダ・ログ監視の数に制限がなくなります。</p>
+<p>無料版では、接続の種類（SFTP、FTP、WebDAV、S3、OneDrive、Dropbox）ごとに 1 件、ローカルフォルダ 1 件、ログ監視 1 件、金庫 1 件で、すべての機能を利用できます。App 内課金の <b>Moorly Pro</b>（買い切り）を購入すると、接続・ローカルフォルダ・ログ監視・金庫の数に制限がなくなります。</p>
 
 <h2 id="faq">よくある質問</h2>
 <h3>OneDrive の接続を保存すると「このアカウントには OneDrive がありません」と表示される</h3>

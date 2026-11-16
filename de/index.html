@@ -14,7 +14,7 @@
 
 <nav class="toc">
 <a href="#start">Erste Schritte</a><a href="#panel">Bereich in der Menüleiste</a><a href="#drop">Hochladen per Drag &amp; Drop</a><a href="#local">Lokale Ordner</a>
-<a href="#context">Kontextmenü im Finder</a><a href="#search">Dateisuche</a><a href="#logs">Live-Logs</a><a href="#terminal">Terminal</a>
+<a href="#context">Kontextmenü im Finder</a><a href="#vault">Tresore</a><a href="#search">Dateisuche</a><a href="#logs">Live-Logs</a><a href="#terminal">Terminal</a>
 <a href="#permissions">Berechtigungen</a><a href="#pro">Gratis und Pro</a><a href="#faq">Häufige Fragen</a><a href="#contact">Kontakt</a>
 </nav>
 
@@ -98,6 +98,20 @@ Moorly kann auch mit Ordnern arbeiten, die sich bereits auf Ihrem Mac befinden, 
 </table>
 <p class="muted">Ist eine Aktion für den Servertyp nicht verfügbar, teilt Moorly Ihnen den Grund mit.</p>
 
+<h2 id="vault">Cryptomator-Tresore (verschlüsselte Ordner)</h2>
+<p>Dateien werden auf diesem Mac verschlüsselt, bevor sie hochgeladen werden. Auf dem Server liegen nur unlesbare Namen und Inhalte – weder dein Cloud-Anbieter noch der Server-Admin noch jemand, der dein Konto stiehlt, kann sie lesen. Tresore nutzen das Standard-Cryptomator-Format, daher können auch die Cryptomator-Apps (Windows, iPhone, Android) denselben Tresor öffnen.</p>
+<ol>
+<li>Klicke im Panel neben einem Server auf <b>…</b> › <b>Cryptomator-Tresor …</b> (oder im Verbindungsfenster auf <b>…</b> › <b>Cryptomator-Tresor öffnen oder erstellen …</b>).</li>
+<li><b>Vorhandenen Tresor öffnen</b>: Tresorordner (mit <code>vault.cryptomator</code>) und Passwort eingeben. <b>Neuen Tresor erstellen</b>: Ordner und ein Passwort mit mindestens 8 Zeichen eingeben.</li>
+<li>Der Tresor erscheint im Finder als eigene Verbindung. Darin öffnest und sicherst du Dateien wie in jedem Ordner.</li>
+</ol>
+<div class="tip"><b>Wenn du das Passwort vergisst, kann niemand (auch Moorly nicht) deine Dateien wiederherstellen.</b> Notiere es an einem sicheren Ort. Der Tresorschlüssel liegt im Schlüsselbund dieses Macs, du musst ihn nicht erneut eingeben.</div>
+<ul>
+<li>Verborgen werden Namen und Inhalte. Anzahl der Dateien, ungefähre Größen und Änderungszeiten bleiben auf dem Server sichtbar.</li>
+<li>Serverseitiges Komprimieren, Freigabelinks und Live-Logs gibt es im Tresor nicht (der Server kann die Dateien nicht lesen).</li>
+<li>Unterstützt: Cryptomator-Tresorformat 8 mit AES-GCM (aktueller Cryptomator-Standard).</li>
+</ul>
+
 <h2 id="search">Dateisuche</h2>
 <img class="shot" src="../img/de-2-search.jpg" alt="Fenster der Dateisuche">
 <p>Klicken Sie im Bereich in der Menüleiste auf 🔍 oder drücken Sie überall <kbd>⌃⌥⌘F</kbd>. Dateien werden anhand ihres Namens gefunden – auch in Ordnern, die Sie noch nicht geöffnet haben.</p>
@@ -139,7 +153,7 @@ Moorly kann auch mit Ordnern arbeiten, die sich bereits auf Ihrem Mac befinden, 
 <p class="muted">Wenn Sie abgelehnt haben, ändern Sie dies unter <b>Systemeinstellungen › Datenschutz &amp; Sicherheit › Automation</b>.</p>
 
 <h2 id="pro">Gratis und Pro</h2>
-<p>Die Gratisversion enthält alle Funktionen mit je einer Verbindung pro Typ (SFTP, FTP, WebDAV, S3, OneDrive, Dropbox), einem lokalen Ordner und einer Log-Überwachung. Ein einmaliger In-App-Kauf von <b>Moorly Pro</b> hebt diese Beschränkungen auf: unbegrenzt viele Verbindungen, lokale Ordner und Log-Überwachungen.</p>
+<p>Die Gratisversion enthält alle Funktionen mit je einer Verbindung pro Typ (SFTP, FTP, WebDAV, S3, OneDrive, Dropbox), einem lokalen Ordner, einer Log-Überwachung und einem Cryptomator-Tresor. Ein einmaliger In-App-Kauf von <b>Moorly Pro</b> hebt diese Beschränkungen auf: unbegrenzt viele Verbindungen, lokale Ordner, Log-Überwachungen und Tresore.</p>
 
 <h2 id="faq">Häufige Fragen</h2>
 <h3>Beim Sichern einer OneDrive-Verbindung erscheint „Dieser Account hat kein OneDrive“</h3>
