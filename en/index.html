@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moorly User Guide</title>
+<meta name="description" content="Moorly User Guide: connect servers and clouds to the Finder, and use file search, live logs and local folders">
+<link rel="stylesheet" href="../guide.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top"><img src="../icon.png" alt=""><div><h1>Moorly User Guide</h1><div class="muted">Servers &amp; clouds right in the Finder · macOS 14 or later</div></div></header>
+<nav class="lang" style="margin-top:14px"><a href="../ko/">한국어</a><a href="../privacy.html#en">Privacy Policy</a><a href="https://github.com/jwss-lee/moorly/issues">Contact</a></nav>
+
+<nav class="toc">
+<a href="#start">Getting started</a><a href="#panel">Menu bar panel</a><a href="#drop">Drag to upload</a><a href="#local">Local folders</a>
+<a href="#context">Finder shortcut menu</a><a href="#search">File search</a><a href="#logs">Live logs</a><a href="#terminal">Terminal</a>
+<a href="#permissions">Permissions</a><a href="#pro">Free and Pro</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+</nav>
+
+<p>Moorly puts SFTP, FTP, WebDAV and S3 servers, OneDrive and Dropbox in the Finder sidebar so you can open and save files as if they were on your Mac.
+It can also work with folders already on your Mac, such as iCloud Drive or a Google Drive app folder.</p>
+
+<h2 id="start">Getting started</h2>
+<img class="shot" src="../img/en-1-connections.jpg" alt="Connection list and service picker">
+<ol>
+<li>Click the Moorly icon in the menu bar and open <b>Connections</b>.</li>
+<li>Click <b>+</b> (<kbd>⌘N</kbd>) and choose a service.</li>
+<li><b>Servers (SFTP, FTP, WebDAV, S3):</b> enter the address, user name and password or key, then click <b>Test Connection and Save</b>.<br>
+<b>Clouds (OneDrive, Dropbox):</b> click <b>Sign In with Microsoft (or Dropbox)…</b>. The sign-in page opens in your browser. After you sign in and allow access, click <b>Open</b> when the browser asks to open Moorly, check the name and click <b>Save</b>.</li>
+<li>Click <b>Mount</b> in the list. The connection appears under <b>Locations</b> in the Finder sidebar.</li>
+</ol>
+<div class="tip">Files are downloaded when you open them and uploaded when you save. Passwords and sign-in tokens are stored only in the macOS Keychain.</div>
+<h3>SFTP tips</h3>
+<ul>
+<li>Use <b>Import from ~/.ssh/config…</b> to reuse your existing host settings.</li>
+<li>If you need to go through a jump host, enter it under <b>Advanced › Jump host</b>.</li>
+<li>When you mount the server root (<code>/</code>), <code>/proc</code> and <code>/sys</code> are hidden (they are constantly changing virtual folders).</li>
+</ul>
+
+<h2 id="panel">Menu bar panel</h2>
+<p>Click the Moorly icon in the menu bar to open the panel. (Control-click or <kbd>⌥</kbd>-click opens the classic menu.)</p>
+<ul>
+<li><b>Servers:</b> the dot on each icon shows the status — green mounted, orange a problem, gray not mounted. Click a row to open the folder you last viewed. <b>…</b> has Unmount, Refresh, Analyze Disk Usage, Open in Terminal and more.</li>
+<li><b>Folders:</b> for each server, <b>★ Favorites · 🔥 Frequent · 🕘 Recent</b>. Hold the pointer over a folder and click ☆ to add or remove a favorite.</li>
+<li><b>Frequent</b> lists folders you opened at least twice in the last 30 days, most opened first. Set how many to show per server in <b>Settings › Menu</b>.</li>
+<li>Folders that Moorly opens keep their history, so the Finder’s ◀ (Back) and <kbd>⌘↑</kbd> take you to the enclosing folder.</li>
+</ul>
+
+<h2 id="drop">Drag to upload</h2>
+<p>When you pick up a file in the Finder, a small <b>“Upload with Moorly”</b> area appears below the menu bar icon. Drag the file onto it to see folders for each server.</p>
+<ul>
+<li><b>Drop on a folder</b> to upload it there. If a file with the same name exists, Moorly keeps both (“name 2”).</li>
+<li><b>Drop on a server title</b> to choose where to upload.</li>
+<li>To show the full list right away, change <b>Settings › Drop Panel › Style</b>.</li>
+</ul>
+
+<h2 id="local">Local folders (iCloud Drive · Google Drive · Box · shared folders)</h2>
+<p>Work with folders already on your Mac as if they were servers. They appear in Recent, Frequent and Favorites, accept dropped files, and are included in file search.</p>
+<ol>
+<li>Click <b>Settings › Local Folders › Add Folder…</b></li>
+<li>Choose the folder and click <b>Add This Folder</b>. (macOS security requires you to choose each folder once.)</li>
+</ol>
+<table>
+<tr><th>To add</th><th>Choose</th></tr>
+<tr><td>iCloud Drive</td><td>The <b>Add iCloud Drive…</b> button (or <code>~/Library/Mobile Documents/com~apple~CloudDocs</code>)</td></tr>
+<tr><td>Google Drive</td><td>Install the Google Drive app, then <code>~/Library/CloudStorage/GoogleDrive-your-account</code></td></tr>
+<tr><td>Box · pCloud · MEGA</td><td>Install the app, then the folder it creates (usually inside <code>~/Library/CloudStorage</code>)</td></tr>
+<tr><td>Company shared folder (SMB)</td><td>Connect in the Finder with <b>Go › Connect to Server</b>, then <code>/Volumes/share-name</code></td></tr>
+</table>
+<div class="tip">Google Drive uses the Google Drive app’s folder, so you don’t sign in to Google in Moorly. Files that aren’t downloaded yet are still found by name.</div>
+
+<h2 id="context">Finder shortcut menu</h2>
+<p>Control-click a file or folder inside a server mounted with Moorly to see the <b>Moorly:</b> items.</p>
+<table>
+<tr><th>Item</th><th>Selection</th><th>What it does</th></tr>
+<tr><td>Show Live Log</td><td>1 file</td><td>Follow the log on the server, like <code>tail -F</code></td></tr>
+<tr><td>Find Same File</td><td>1 file</td><td>Find files with the same contents on your servers</td></tr>
+<tr><td>Open in Terminal</td><td>1 item</td><td>An ssh session in that folder (SFTP)</td></tr>
+<tr><td>Analyze Disk Usage</td><td>1 folder</td><td>See which folders and files take up space</td></tr>
+<tr><td>Add to Favorites</td><td>1 folder</td><td>Add to ★ in the menu bar panel</td></tr>
+<tr><td>Copy Share Link</td><td>1 item</td><td>A share link for S3, OneDrive or Dropbox</td></tr>
+<tr><td>Compress as tar.gz/zip, Extract, Duplicate on Server</td><td>1 or more</td><td>Done on the server, without downloading (SFTP)</td></tr>
+</table>
+<p class="muted">If an action isn’t available for the server type, Moorly tells you why.</p>
+
+<h2 id="search">File search</h2>
+<img class="shot" src="../img/en-2-search.jpg" alt="File search window">
+<p>Click 🔍 in the menu bar panel, or press <kbd>⌃⌥⌘F</kbd> anywhere. Finds files by name even in folders you haven’t opened.</p>
+<ul>
+<li>Forgiving of spaces and typos.</li>
+<li>Filter with <b>All / Files / Folders</b> below the search field, and by kind, date, size or folder.</li>
+<li>Conditions: <code>ext:pdf</code> <code>size:&gt;100mb</code> <code>kind:folder</code> <code>folder:/var/log</code> <code>server:prod</code> <code>date:week</code></li>
+<li>The <b>Duplicates</b> tab finds the same file on several servers.</li>
+<li>Turn on 📌 at the top right to keep the window on top of other apps.</li>
+<li>Choose what to index per server in <b>Settings › Find Files</b>. For SFTP and FTP, system folders like <code>/usr</code>, <code>/proc</code> and <code>/var/log</code> are skipped.</li>
+</ul>
+
+<h2 id="logs">Live logs</h2>
+<img class="shot" src="../img/en-3-logs.jpg" alt="Live log window">
+<p>Menu bar panel › <b>Live Log › Open Log File…</b>, or Control-click a file › <b>Moorly: Show Live Log</b>.</p>
+<ul>
+<li><b>Path or name:</b> enter a path like <code>/var/log/syslog</code>, or just a name like <code>app</code> and pick from the list below (most recently modified first).</li>
+<li><b>Enter a folder</b> to follow the most recently modified file in it and its subfolders. When a newer file appears (for example, a new daily log), Moorly switches to it within 30 seconds. You can add a name: <code>/app/log/*api*</code></li>
+<li>Choose several servers to merge their logs by time.</li>
+<li>Filters, excluded words, context lines, colors by level, grouped repeated messages, a timeline chart, pause (<kbd>⌘P</kbd>), dark 🌙 and keep on top 📌.</li>
+<li>🔔 <b>Watch:</b> get a macOS notification for certain words or error spikes (keeps working after you close the window).</li>
+</ul>
+<div class="tip">For SFTP, Moorly uses <code>tail -F</code> on the server, so lines appear almost immediately. For accounts that can’t run commands and other server types, Moorly reads new data every 1.5 seconds.</div>
+
+<h2 id="terminal">Terminal (iTerm2 · Terminal)</h2>
+<ul>
+<li>Control-click an SFTP server in the connection list › <b>Open in iTerm2</b> (or <b>…</b> in the panel). Choose the app in <b>Settings › Terminal</b>.</li>
+<li><b>Set Up Login Without Password…</b> creates an SSH key for this Mac (default <code>~/.ssh/moorly_ed25519</code>) and adds one public-key line to <code>~/.ssh/authorized_keys</code> on the server. After that, the terminal doesn’t ask for a password.</li>
+</ul>
+
+<h2 id="permissions">Permissions — why does macOS ask?</h2>
+<table>
+<tr><th>What macOS asks</th><th>Why</th></tr>
+<tr><td>“Moorly wants to control Finder”</td><td>To record recent and frequent folders, Moorly checks which folder the frontmost Finder window shows — only while Finder is in front, and it never touches your files. Turn off: <b>Settings › Menu › Record Folders Opened in Finder</b></td></tr>
+<tr><td>“Moorly wants to control iTerm2 (Terminal)”</td><td>To send an <code>ssh</code> command when you open a server in the terminal.</td></tr>
+<tr><td>A folder picker</td><td>You choose exactly which folders Moorly may use, such as local folders or where to save an SSH key.</td></tr>
+<tr><td>Notifications</td><td>Log-watch alerts.</td></tr>
+</table>
+<p class="muted">If you declined, change it in <b>System Settings › Privacy &amp; Security › Automation</b>.</p>
+
+<h2 id="pro">Free and Pro</h2>
+<p>The free version includes every feature with one connection of each type (SFTP, FTP, WebDAV, S3, OneDrive, Dropbox). A one-time <b>Moorly Pro</b> in-app purchase removes the limit. Local folders are not limited.</p>
+
+<h2 id="faq">FAQ</h2>
+<h3>Saving a OneDrive connection says “This account doesn’t have a OneDrive”</h3>
+<p>The personal account has never opened OneDrive. Sign in once at onedrive.live.com in your browser, then try again. Work or school accounts need a OneDrive (Microsoft 365) license.</p>
+<h3>My work Microsoft account is blocked (“Need admin approval”)</h3>
+<p>Your organization blocks outside apps. Ask your administrator to approve Moorly.</p>
+<h3>A warning (⚠︎) appears in the list</h3>
+<p>The server couldn’t be reached or your sign-in expired. Choose <b>…</b> › <b>Try Again</b> in the panel, or click the warning to sign in again.</p>
+<h3>Folders I open in the Finder don’t appear in Recent</h3>
+<p>Make sure Finder control is allowed (see <a href="#permissions">Permissions</a>). If the panel shows an orange notice, click <b>Open Automation Settings…</b>.</p>
+<h3>There are no Moorly items in the shortcut menu</h3>
+<p>They appear only inside servers mounted with Moorly, not in local folders such as iCloud Drive.</p>
+<h3>SFTP through a jump host fails</h3>
+<p>The jump host’s sshd must allow TCP forwarding (<code>AllowTcpForwarding yes</code>, the default). For the host, enter the address as seen from the jump host.</p>
+<h3>I don’t get log-watch notifications</h3>
+<p>Allow notifications in <b>System Settings › Notifications › Moorly</b>.</p>
+
+<h2 id="contact">Contact</h2>
+<p>Open an issue on <a href="https://github.com/jwss-lee/moorly/issues">GitHub Issues</a> with your macOS version and what happened. Please don’t include passwords or server addresses.</p>
+
+<footer class="muted">© 2026 JEAWOO LEE · <a href="../privacy.html#en">Privacy Policy</a></footer>
+</div>
+</body>
+</html>
