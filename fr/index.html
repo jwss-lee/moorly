@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guide d’utilisation de Moorly</title>
+<meta name="description" content="Guide d’utilisation de Moorly : connectez des serveurs et des services cloud au Finder, et utilisez la recherche de fichiers, les journaux en direct et les dossiers locaux">
+<link rel="stylesheet" href="../guide.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top"><img src="../icon.png" alt=""><div><h1>Guide d’utilisation de Moorly</h1><div class="muted">Vos serveurs et services cloud directement dans le Finder · macOS 14 ou ultérieur</div></div></header>
+<nav class="lang" style="margin-top:14px"><a href="../en/">English</a><a href="../ko/">한국어</a><a href="../ja/">日本語</a><a href="../de/">Deutsch</a><a href="../es/">Español</a><a href="../pt-BR/">Português</a><a href="../zh-Hant/">繁體中文</a><a href="../privacy.html#fr">Politique de confidentialité</a><a href="#contact">Contact</a></nav>
+
+<nav class="toc">
+<a href="#start">Premiers pas</a><a href="#panel">Panneau de la barre des menus</a><a href="#drop">Glisser pour envoyer</a><a href="#local">Dossiers locaux</a>
+<a href="#context">Menu contextuel du Finder</a><a href="#search">Recherche de fichiers</a><a href="#logs">Journaux en direct</a><a href="#terminal">Terminal</a>
+<a href="#permissions">Autorisations</a><a href="#pro">Gratuit et Pro</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+</nav>
+
+<p>Moorly place vos serveurs SFTP, FTP, WebDAV et S3, ainsi que OneDrive et Dropbox, dans la barre latérale du Finder pour que vous puissiez ouvrir et enregistrer des fichiers comme s’ils se trouvaient sur votre Mac.
+Moorly fonctionne aussi avec des dossiers déjà présents sur votre Mac, comme iCloud Drive ou le dossier de l’app Google Drive.</p>
+
+<h2 id="start">Premiers pas</h2>
+<img class="shot" src="../img/fr-1-connections.jpg" alt="Liste des connexions et choix du service">
+<ol>
+<li>Cliquez sur l’icône Moorly dans la barre des menus, puis ouvrez <b>Connexions</b>.</li>
+<li>Cliquez sur <b>+</b> (<kbd>⌘N</kbd>) et choisissez un service.</li>
+<li><b>Serveurs (SFTP, FTP, WebDAV, S3)&nbsp;:</b> saisissez l’adresse, le nom d’utilisateur et le mot de passe ou la clé, puis cliquez sur <b>Tester la connexion et enregistrer</b>.<br>
+<b>Services cloud (OneDrive, Dropbox)&nbsp;:</b> cliquez sur <b>Se connecter avec Microsoft (ou Dropbox)…</b>. La page de connexion s’ouvre dans votre navigateur. Une fois connecté et l’accès autorisé, cliquez sur <b>Ouvrir</b> lorsque le navigateur propose d’ouvrir Moorly, vérifiez le nom, puis cliquez sur <b>Enregistrer</b>.</li>
+<li>Cliquez sur <b>Monter</b> dans la liste. La connexion apparaît sous <b>Emplacements</b> dans la barre latérale du Finder.</li>
+</ol>
+<div class="tip">Les fichiers sont téléchargés lorsque vous les ouvrez et envoyés lorsque vous les enregistrez. Les mots de passe et les jetons de connexion sont stockés uniquement dans le trousseau macOS.</div>
+<h3>Conseils pour SFTP</h3>
+<ul>
+<li>Utilisez <b>Importer depuis ~/.ssh/config…</b> pour reprendre vos réglages d’hôte existants.</li>
+<li>Si vous devez passer par un hôte de rebond, indiquez-le dans <b>Avancé › Hôte de rebond</b>.</li>
+<li>Lorsque vous montez la racine du serveur (<code>/</code>), <code>/proc</code> et <code>/sys</code> sont masqués (ce sont des dossiers virtuels en constante évolution).</li>
+</ul>
+
+<h2 id="panel">Panneau de la barre des menus</h2>
+<p>Cliquez sur l’icône Moorly dans la barre des menus pour ouvrir le panneau. (Un clic en maintenant la touche Contrôle ou <kbd>⌥</kbd> enfoncée ouvre le menu classique.)</p>
+<ul>
+<li><b>Serveurs&nbsp;:</b> la pastille sur chaque icône indique l’état&nbsp;: vert pour monté, orange en cas de problème, gris pour non monté. Cliquez sur une ligne pour ouvrir le dernier dossier consulté. <b>…</b> propose Démonter, Actualiser, Analyser l’utilisation du disque, Ouvrir dans Terminal, et plus encore.</li>
+<li><b>Dossiers&nbsp;:</b> pour chaque serveur, <b>★ Favoris · 🔥 Fréquents · 🕘 Récents</b>. Placez le pointeur sur un dossier et cliquez sur ☆ pour l’ajouter aux favoris ou l’en retirer.</li>
+<li><b>Fréquents</b> répertorie les dossiers que vous avez ouverts au moins deux fois au cours des 30 derniers jours, les plus ouverts en premier. Choisissez combien en afficher par serveur dans <b>Réglages › Menu</b>.</li>
+<li>Les dossiers ouverts par Moorly conservent leur historique&nbsp;: le bouton ◀ (Précédent) du Finder et <kbd>⌘↑</kbd> vous ramènent au dossier parent.</li>
+</ul>
+
+<h2 id="drop">Glisser pour envoyer</h2>
+<p>Lorsque vous saisissez un fichier dans le Finder, une petite zone <b>«&nbsp;Envoyer avec Moorly&nbsp;»</b> apparaît sous l’icône de la barre des menus. Faites-y glisser le fichier pour afficher les dossiers de chaque serveur.</p>
+<ul>
+<li><b>Déposez-le sur un dossier</b> pour l’y envoyer. Si un fichier du même nom existe, Moorly conserve les deux («&nbsp;nom 2&nbsp;»).</li>
+<li><b>Déposez-le sur le titre d’un serveur</b> pour choisir l’emplacement d’envoi.</li>
+<li>Pour afficher directement la liste complète, modifiez <b>Réglages › Panneau de dépôt › Style</b>.</li>
+</ul>
+
+<h2 id="local">Dossiers locaux (iCloud Drive · Google Drive · Box · dossiers partagés)</h2>
+<p>Utilisez les dossiers déjà présents sur votre Mac comme s’il s’agissait de serveurs. Ils apparaissent dans Récents, Fréquents et Favoris, acceptent les fichiers déposés et sont inclus dans la recherche de fichiers.</p>
+<ol>
+<li>Cliquez sur <b>Réglages › Dossiers locaux › Ajouter un dossier…</b></li>
+<li>Choisissez le dossier et cliquez sur <b>Ajouter ce dossier</b>. (La sécurité de macOS exige que vous choisissiez chaque dossier une fois.)</li>
+</ol>
+<table>
+<tr><th>Pour ajouter</th><th>Choisissez</th></tr>
+<tr><td>iCloud Drive</td><td>Le bouton <b>Ajouter iCloud Drive…</b> (ou <code>~/Library/Mobile Documents/com~apple~CloudDocs</code>)</td></tr>
+<tr><td>Google Drive</td><td>Installez l’app Google Drive, puis choisissez <code>~/Library/CloudStorage/GoogleDrive-votre-compte</code></td></tr>
+<tr><td>Box · pCloud · MEGA</td><td>Installez l’app, puis choisissez le dossier qu’elle crée (généralement dans <code>~/Library/CloudStorage</code>)</td></tr>
+<tr><td>Dossier partagé de l’entreprise (SMB)</td><td>Connectez-vous dans le Finder avec <b>Aller › Se connecter au serveur</b>, puis choisissez <code>/Volumes/nom-du-partage</code></td></tr>
+</table>
+<div class="tip">Google Drive utilise le dossier de l’app Google Drive&nbsp;: vous n’avez donc pas à vous connecter à Google dans Moorly. Les fichiers qui ne sont pas encore téléchargés restent trouvables par leur nom.</div>
+
+<h2 id="context">Menu contextuel du Finder</h2>
+<p>Cliquez sur un fichier ou un dossier en maintenant la touche Contrôle enfoncée, dans un serveur monté avec Moorly, pour afficher les éléments <b>Moorly&nbsp;:</b>.</p>
+<table>
+<tr><th>Élément</th><th>Sélection</th><th>Action</th></tr>
+<tr><td>Afficher le journal en direct</td><td>1 fichier</td><td>Suivre le journal sur le serveur, comme <code>tail -F</code></td></tr>
+<tr><td>Rechercher le même fichier</td><td>1 fichier</td><td>Trouver les fichiers au contenu identique sur vos serveurs</td></tr>
+<tr><td>Ouvrir dans Terminal</td><td>1 élément</td><td>Une session ssh dans ce dossier (SFTP)</td></tr>
+<tr><td>Analyser l’utilisation du disque</td><td>1 dossier</td><td>Voir quels dossiers et fichiers occupent de l’espace</td></tr>
+<tr><td>Ajouter aux favoris</td><td>1 dossier</td><td>Ajouter à ★ dans le panneau de la barre des menus</td></tr>
+<tr><td>Copier le lien de partage</td><td>1 élément</td><td>Un lien de partage pour S3, OneDrive ou Dropbox</td></tr>
+<tr><td>Compresser en tar.gz/zip sur le serveur, Décompresser sur le serveur, Dupliquer sur le serveur</td><td>1 ou plus</td><td>Effectué sur le serveur, sans téléchargement (SFTP)</td></tr>
+</table>
+<p class="muted">Si une action n’est pas disponible pour ce type de serveur, Moorly vous en indique la raison.</p>
+
+<h2 id="search">Recherche de fichiers</h2>
+<img class="shot" src="../img/fr-2-search.jpg" alt="Fenêtre de recherche de fichiers">
+<p>Cliquez sur 🔍 dans le panneau de la barre des menus, ou appuyez sur <kbd>⌃⌥⌘F</kbd> depuis n’importe où. Les fichiers sont trouvés par leur nom, même dans des dossiers que vous n’avez jamais ouverts.</p>
+<ul>
+<li>Tolère les espaces et les fautes de frappe.</li>
+<li>Filtrez avec <b>Tout / Fichiers / Dossiers</b> sous le champ de recherche, ainsi que par type, date, taille ou dossier.</li>
+<li>Conditions&nbsp;: <code>ext:pdf</code> <code>size:&gt;100mb</code> <code>kind:folder</code> <code>folder:/var/log</code> <code>server:prod</code> <code>date:week</code></li>
+<li>L’onglet <b>Doublons</b> trouve un même fichier présent sur plusieurs serveurs.</li>
+<li>Activez 📌 en haut à droite pour garder la fenêtre au premier plan par-dessus les autres apps.</li>
+<li>Choisissez ce qui est indexé pour chaque serveur dans <b>Réglages › Rechercher des fichiers</b>. Pour SFTP et FTP, les dossiers système comme <code>/usr</code>, <code>/proc</code> et <code>/var/log</code> sont ignorés.</li>
+</ul>
+
+<h2 id="logs">Journaux en direct</h2>
+<img class="shot" src="../img/fr-3-logs.jpg" alt="Fenêtre du journal en direct">
+<p>Panneau de la barre des menus › <b>Journal en direct › Ouvrir un fichier journal…</b>, ou clic sur un fichier en maintenant la touche Contrôle enfoncée › <b>Moorly&nbsp;: Afficher le journal en direct</b>.</p>
+<ul>
+<li><b>Chemin ou nom&nbsp;:</b> saisissez un chemin comme <code>/var/log/syslog</code>, ou simplement un nom comme <code>app</code>, puis choisissez dans la liste en dessous (les fichiers modifiés le plus récemment en premier).</li>
+<li><b>Saisissez un dossier</b> pour suivre le fichier modifié le plus récemment dans ce dossier et ses sous-dossiers. Lorsqu’un fichier plus récent apparaît (par exemple, un nouveau journal quotidien), Moorly bascule dessus en moins de 30&nbsp;secondes. Vous pouvez ajouter un nom&nbsp;: <code>/app/log/*api*</code></li>
+<li>Choisissez plusieurs serveurs pour fusionner leurs journaux par ordre chronologique.</li>
+<li>Filtres, mots exclus, lignes de contexte, couleurs par niveau, regroupement des messages répétés, graphique chronologique, pause (<kbd>⌘P</kbd>), mode sombre 🌙 et maintien au premier plan 📌.</li>
+<li>🔔 <b>Surveillance&nbsp;:</b> recevez une notification macOS pour certains mots ou en cas de pic d’erreurs (la surveillance continue après la fermeture de la fenêtre).</li>
+</ul>
+<div class="tip">Pour SFTP, Moorly utilise <code>tail -F</code> sur le serveur&nbsp;: les lignes apparaissent donc presque immédiatement. Pour les comptes qui ne peuvent pas exécuter de commandes et pour les autres types de serveurs, Moorly lit les nouvelles données toutes les 1,5&nbsp;seconde.</div>
+
+<h2 id="terminal">Terminal (iTerm2 · Terminal)</h2>
+<ul>
+<li>Cliquez sur un serveur SFTP dans la liste des connexions en maintenant la touche Contrôle enfoncée › <b>Ouvrir dans iTerm2</b> (ou <b>…</b> dans le panneau). Choisissez l’app dans <b>Réglages › Terminal</b>.</li>
+<li><b>Configurer la connexion sans mot de passe…</b> crée une clé SSH pour ce Mac (par défaut <code>~/.ssh/moorly_ed25519</code>) et ajoute une ligne de clé publique à <code>~/.ssh/authorized_keys</code> sur le serveur. Le terminal ne vous demande alors plus de mot de passe.</li>
+</ul>
+
+<h2 id="permissions">Autorisations — pourquoi macOS vous les demande-t-il&nbsp;?</h2>
+<table>
+<tr><th>Ce que demande macOS</th><th>Pourquoi</th></tr>
+<tr><td>«&nbsp;Moorly souhaite contrôler Finder&nbsp;»</td><td>Pour enregistrer les dossiers récents et fréquents, Moorly vérifie quel dossier affiche la fenêtre du Finder au premier plan — uniquement lorsque le Finder est au premier plan, et sans jamais toucher à vos fichiers. Pour désactiver&nbsp;: <b>Réglages › Menu › Enregistrer les dossiers ouverts dans le Finder</b></td></tr>
+<tr><td>«&nbsp;Moorly souhaite contrôler iTerm2 (Terminal)&nbsp;»</td><td>Pour envoyer une commande <code>ssh</code> lorsque vous ouvrez un serveur dans le terminal.</td></tr>
+<tr><td>Un sélecteur de dossier</td><td>Vous choisissez précisément les dossiers que Moorly peut utiliser, comme les dossiers locaux ou l’emplacement d’enregistrement d’une clé SSH.</td></tr>
+<tr><td>Notifications</td><td>Alertes de surveillance des journaux.</td></tr>
+</table>
+<p class="muted">Si vous avez refusé, modifiez ce choix dans <b>Réglages Système › Confidentialité et sécurité › Automatisation</b>.</p>
+
+<h2 id="pro">Gratuit et Pro</h2>
+<p>La version gratuite inclut toutes les fonctionnalités, avec une connexion de chaque type (SFTP, FTP, WebDAV, S3, OneDrive, Dropbox). Un achat intégré unique, <b>Moorly Pro</b>, supprime cette limite. Les dossiers locaux ne sont pas limités.</p>
+
+<h2 id="faq">FAQ</h2>
+<h3>L’enregistrement d’une connexion OneDrive indique «&nbsp;Ce compte ne dispose pas de OneDrive&nbsp;»</h3>
+<p>Ce compte personnel n’a jamais ouvert OneDrive. Connectez-vous une fois sur onedrive.live.com dans votre navigateur, puis réessayez. Les comptes professionnels ou scolaires nécessitent une licence OneDrive (Microsoft 365).</p>
+<h3>Mon compte Microsoft professionnel est bloqué («&nbsp;Approbation de l’administrateur requise&nbsp;»)</h3>
+<p>Votre organisation bloque les apps externes. Demandez à votre administrateur d’approuver Moorly.</p>
+<h3>Un avertissement (⚠︎) apparaît dans la liste</h3>
+<p>Le serveur est injoignable ou votre connexion a expiré. Choisissez <b>…</b> › <b>Réessayer</b> dans le panneau, ou cliquez sur l’avertissement pour vous reconnecter.</p>
+<h3>Les dossiers que j’ouvre dans le Finder n’apparaissent pas dans Récents</h3>
+<p>Vérifiez que le contrôle du Finder est autorisé (consultez <a href="#permissions">Autorisations</a>). Si le panneau affiche un avis orange, cliquez sur <b>Ouvrir les réglages d’automatisation…</b>.</p>
+<h3>Le menu contextuel ne contient aucun élément Moorly</h3>
+<p>Ils n’apparaissent que dans les serveurs montés avec Moorly, pas dans les dossiers locaux comme iCloud Drive.</p>
+<h3>La connexion SFTP via un hôte de rebond échoue</h3>
+<p>Le sshd de l’hôte de rebond doit autoriser le transfert TCP (<code>AllowTcpForwarding yes</code>, valeur par défaut). Pour l’hôte, saisissez l’adresse telle qu’elle est vue depuis l’hôte de rebond.</p>
+<h3>Je ne reçois pas les notifications de surveillance des journaux</h3>
+<p>Autorisez les notifications dans <b>Réglages Système › Notifications › Moorly</b>.</p>
+
+<h2 id="contact">Contact</h2>
+<p>Écrivez à <a href="mailto:giveing7777@gmail.com">giveing7777@gmail.com</a> ou ouvrez un ticket sur <a href="https://github.com/jwss-lee/moorly/issues">GitHub Issues</a> en indiquant votre version de macOS et ce qui s’est passé. Merci de ne pas inclure de mots de passe ni d’adresses de serveur.</p>
+
+<footer class="muted">© 2026 JEAWOO LEE · <a href="../privacy.html#fr">Politique de confidentialité</a></footer>
+</div>
+</body>
+</html>

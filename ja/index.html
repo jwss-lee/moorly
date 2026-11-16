@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moorly ユーザガイド</title>
+<meta name="description" content="Moorly ユーザガイド：サーバやクラウドを Finder に接続し、ファイル検索、リアルタイムログ、ローカルフォルダを活用する方法">
+<link rel="stylesheet" href="../guide.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top"><img src="../icon.png" alt=""><div><h1>Moorly ユーザガイド</h1><div class="muted">サーバとクラウドを Finder でそのまま · macOS 14 以降</div></div></header>
+<nav class="lang" style="margin-top:14px"><a href="../en/">English</a><a href="../ko/">한국어</a><a href="../de/">Deutsch</a><a href="../fr/">Français</a><a href="../es/">Español</a><a href="../pt-BR/">Português</a><a href="../zh-Hant/">繁體中文</a><a href="../privacy.html#ja">プライバシーポリシー</a><a href="#contact">お問い合わせ</a></nav>
+
+<nav class="toc">
+<a href="#start">はじめに</a><a href="#panel">メニューバーのパネル</a><a href="#drop">ドラッグしてアップロード</a><a href="#local">ローカルフォルダ</a>
+<a href="#context">Finder のショートカットメニュー</a><a href="#search">ファイル検索</a><a href="#logs">リアルタイムログ</a><a href="#terminal">ターミナル</a>
+<a href="#permissions">アクセス権</a><a href="#pro">無料版と Pro</a><a href="#faq">よくある質問</a><a href="#contact">お問い合わせ</a>
+</nav>
+
+<p>Moorly を使うと、SFTP、FTP、WebDAV、S3 サーバや OneDrive、Dropbox を Finder のサイドバーに表示して、Mac 上のファイルと同じように開いたり保存したりできます。
+iCloud Drive や Google Drive アプリのフォルダなど、Mac 上にすでにあるフォルダも扱えます。</p>
+
+<h2 id="start">はじめに</h2>
+<img class="shot" src="../img/ja-1-connections.jpg" alt="接続リストとサービスの選択">
+<ol>
+<li>メニューバーの Moorly アイコンをクリックし、<b>接続</b>を開きます。</li>
+<li><b>+</b>（<kbd>⌘N</kbd>）をクリックして、サービスを選択します。</li>
+<li><b>サーバ（SFTP、FTP、WebDAV、S3）：</b>アドレス、ユーザ名、パスワードまたはキーを入力し、<b>接続をテストして保存</b>をクリックします。<br>
+<b>クラウド（OneDrive、Dropbox）：</b><b>Microsoft（または Dropbox）アカウントでログイン…</b>をクリックします。ブラウザでサインインページが開きます。サインインしてアクセスを許可したあと、ブラウザで Moorly を開くかどうか確認されたら<b>開く</b>をクリックし、名前を確認して<b>保存</b>をクリックします。</li>
+<li>リストで<b>マウント</b>をクリックします。Finder のサイドバーの<b>場所</b>に接続が表示されます。</li>
+</ol>
+<div class="tip">ファイルは開いたときにダウンロードされ、保存したときにアップロードされます。パスワードとサインイン用トークンは macOS のキーチェーンにのみ保存されます。</div>
+<h3>SFTP のヒント</h3>
+<ul>
+<li><b>~/.ssh/configから読み込む…</b>を使うと、既存のホスト設定をそのまま利用できます。</li>
+<li>ジャンプホストを経由する必要がある場合は、<b>詳細 › 踏み台サーバ（ジャンプホスト）</b>に入力します。</li>
+<li>サーバのルート（<code>/</code>）をマウントした場合、<code>/proc</code> と <code>/sys</code> は表示されません（常に変化し続ける仮想フォルダのため）。</li>
+</ul>
+
+<h2 id="panel">メニューバーのパネル</h2>
+<p>メニューバーの Moorly アイコンをクリックすると、パネルが開きます。（Control キーを押しながらクリック、または <kbd>⌥</kbd> キーを押しながらクリックすると、従来のメニューが開きます。）</p>
+<ul>
+<li><b>サーバ：</b>各アイコンの点で状態がわかります。緑はマウント済み、オレンジは問題あり、グレイは未マウントです。行をクリックすると、最後に表示していたフォルダが開きます。<b>…</b>には、マウント解除、更新、ディスク使用量を分析、ターミナルで開くなどの項目があります。</li>
+<li><b>フォルダ：</b>サーバごとに<b>★ お気に入り · 🔥 よく使う · 🕘 最近</b>が表示されます。フォルダにポインタを置いて ☆ をクリックすると、お気に入りに追加または削除できます。</li>
+<li><b>よく使う</b>には、過去 30 日間に 2 回以上開いたフォルダが、開いた回数の多い順に表示されます。サーバごとの表示数は<b>設定 › メニュー</b>で設定できます。</li>
+<li>Moorly で開いたフォルダは履歴が保持されるため、Finder の ◀（戻る）や <kbd>⌘↑</kbd> で上の階層のフォルダに移動できます。</li>
+</ul>
+
+<h2 id="drop">ドラッグしてアップロード</h2>
+<p>Finder でファイルをドラッグし始めると、メニューバーアイコンの下に小さな<b>“Moorlyでアップロード”</b>領域が表示されます。ファイルをそこにドラッグすると、サーバごとのフォルダが表示されます。</p>
+<ul>
+<li><b>フォルダにドロップ</b>すると、そのフォルダにアップロードされます。同じ名前のファイルがある場合は、両方が残されます（“名前 2”）。</li>
+<li><b>サーバのタイトルにドロップ</b>すると、アップロード先を選択できます。</li>
+<li>最初からすべてのリストを表示するには、<b>設定 › ドロップパネル › スタイル</b>を変更します。</li>
+</ul>
+
+<h2 id="local">ローカルフォルダ（iCloud Drive · Google Drive · Box · 共有フォルダ）</h2>
+<p>Mac 上にすでにあるフォルダを、サーバと同じように扱えます。最近、よく使う、お気に入りに表示され、ファイルのドロップを受け付け、ファイル検索の対象にもなります。</p>
+<ol>
+<li><b>設定 › ローカルフォルダ › フォルダを追加…</b>をクリックします。</li>
+<li>フォルダを選択し、<b>このフォルダを追加</b>をクリックします。（macOS のセキュリティにより、フォルダごとに一度選択する必要があります。）</li>
+</ol>
+<table>
+<tr><th>追加するもの</th><th>選択する場所</th></tr>
+<tr><td>iCloud Drive</td><td><b>iCloud Driveを追加…</b>ボタン（または <code>~/Library/Mobile Documents/com~apple~CloudDocs</code>）</td></tr>
+<tr><td>Google Drive</td><td>Google Drive アプリをインストールしてから、<code>~/Library/CloudStorage/GoogleDrive-アカウント</code></td></tr>
+<tr><td>Box · pCloud · MEGA</td><td>アプリをインストールしてから、アプリが作成するフォルダ（通常は <code>~/Library/CloudStorage</code> 内）</td></tr>
+<tr><td>会社の共有フォルダ（SMB）</td><td>Finder で<b>移動 › サーバへ接続</b>を使って接続してから、<code>/Volumes/共有名</code></td></tr>
+</table>
+<div class="tip">Google Drive は Google Drive アプリのフォルダを使うため、Moorly で Google にサインインする必要はありません。まだダウンロードされていないファイルも、名前で検索できます。</div>
+
+<h2 id="context">Finder のショートカットメニュー</h2>
+<p>Moorly でマウントしたサーバ内のファイルやフォルダを Control キーを押しながらクリックすると、<b>Moorly:</b> で始まる項目が表示されます。</p>
+<table>
+<tr><th>項目</th><th>選択対象</th><th>機能</th></tr>
+<tr><td>ライブログを表示</td><td>1 つのファイル</td><td><code>tail -F</code> のように、サーバ上のログを追跡します</td></tr>
+<tr><td>同じファイルを検索</td><td>1 つのファイル</td><td>同じ内容のファイルをサーバ上で検索します</td></tr>
+<tr><td>ターミナルで開く</td><td>1 つの項目</td><td>そのフォルダで ssh セッションを開きます（SFTP）</td></tr>
+<tr><td>ディスク使用量を分析</td><td>1 つのフォルダ</td><td>どのフォルダやファイルが容量を使っているかを確認します</td></tr>
+<tr><td>お気に入りに追加</td><td>1 つのフォルダ</td><td>メニューバーのパネルの ★ に追加します</td></tr>
+<tr><td>共有リンクをコピー</td><td>1 つの項目</td><td>S3、OneDrive、Dropbox の共有リンクを作成します</td></tr>
+<tr><td>サーバ上でtar.gzに圧縮／サーバ上でzipに圧縮、サーバ上で展開、サーバ上で複製</td><td>1 つ以上</td><td>ダウンロードせずにサーバ上で実行します（SFTP）</td></tr>
+</table>
+<p class="muted">サーバの種類によって使用できない操作の場合は、その理由が表示されます。</p>
+
+<h2 id="search">ファイル検索</h2>
+<img class="shot" src="../img/ja-2-search.jpg" alt="ファイル検索ウインドウ">
+<p>メニューバーのパネルで 🔍 をクリックするか、どこからでも <kbd>⌃⌥⌘F</kbd> を押します。まだ開いていないフォルダ内のファイルも、名前で検索できます。</p>
+<ul>
+<li>スペースや入力ミスがあっても見つかります。</li>
+<li>検索フィールドの下の<b>すべて／ファイル／フォルダ</b>や、種類、日付、サイズ、フォルダで絞り込めます。</li>
+<li>条件：<code>ext:pdf</code> <code>size:&gt;100mb</code> <code>kind:folder</code> <code>folder:/var/log</code> <code>server:prod</code> <code>date:week</code></li>
+<li><b>重複ファイル</b>タブでは、複数のサーバにある同じファイルを検索できます。</li>
+<li>右上の 📌 をオンにすると、ウインドウがほかのアプリより常に手前に表示されます。</li>
+<li>サーバごとにインデックスを作成する対象を<b>設定 › ファイル検索</b>で選択できます。SFTP と FTP では、<code>/usr</code>、<code>/proc</code>、<code>/var/log</code> などのシステムフォルダは対象外です。</li>
+</ul>
+
+<h2 id="logs">リアルタイムログ</h2>
+<img class="shot" src="../img/ja-3-logs.jpg" alt="リアルタイムログウインドウ">
+<p>メニューバーのパネル › <b>リアルタイムログ › ログファイルを開く…</b>を選択するか、ファイルを Control キーを押しながらクリック › <b>Moorly: ライブログを表示</b>を選択します。</p>
+<ul>
+<li><b>パスまたは名前：</b><code>/var/log/syslog</code> のようなパスを入力するか、<code>app</code> のように名前だけを入力して下のリストから選択します（最近変更された順）。</li>
+<li><b>フォルダを入力</b>すると、そのフォルダとサブフォルダ内で最も新しく変更されたファイルを追跡します。より新しいファイル（新しい日別ログなど）が現れると、30 秒以内にそのファイルに切り替わります。名前を付け加えることもできます：<code>/app/log/*api*</code></li>
+<li>複数のサーバを選択すると、ログを時刻順に統合して表示します。</li>
+<li>フィルタ、除外する語句、前後の行の表示、レベル別の色分け、繰り返しメッセージのグループ化、タイムラインのグラフ、一時停止（<kbd>⌘P</kbd>）、ダーク表示 🌙、常に手前に表示 📌 が使えます。</li>
+<li>🔔 <b>監視：</b>特定の語句やエラーの急増を macOS の通知で知らせます（ウインドウを閉じたあとも動作し続けます）。</li>
+</ul>
+<div class="tip">SFTP では、サーバ上で <code>tail -F</code> を使うため、行はほぼ即座に表示されます。コマンドを実行できないアカウントやほかの種類のサーバでは、1.5 秒ごとに新しいデータを読み込みます。</div>
+
+<h2 id="terminal">ターミナル（iTerm2 · ターミナル）</h2>
+<ul>
+<li>接続リストで SFTP サーバを Control キーを押しながらクリック › <b>iTerm2で開く</b>を選択します（またはパネルの <b>…</b>）。使用するアプリは<b>設定 › ターミナル</b>で選択します。</li>
+<li><b>パスワードなしでログインを設定…</b>を使うと、この Mac 用の SSH キー（デフォルトは <code>~/.ssh/moorly_ed25519</code>）が作成され、サーバの <code>~/.ssh/authorized_keys</code> に公開鍵が 1 行追加されます。以降、ターミナルでパスワードを求められなくなります。</li>
+</ul>
+
+<h2 id="permissions">アクセス権 — macOS が確認を求める理由</h2>
+<table>
+<tr><th>macOS からの確認</th><th>理由</th></tr>
+<tr><td>“Moorly” が “Finder” を制御しようとしています</td><td>最近使ったフォルダやよく使うフォルダを記録するために、最前面の Finder ウインドウに表示されているフォルダを確認します。確認するのは Finder が最前面にあるときだけで、ファイルに触れることはありません。オフにするには：<b>設定 › メニュー › Finderで開いたフォルダを記録</b></td></tr>
+<tr><td>“Moorly” が “iTerm2”（ターミナル）を制御しようとしています</td><td>サーバをターミナルで開くときに、<code>ssh</code> コマンドを送るためです。</td></tr>
+<tr><td>フォルダの選択画面</td><td>ローカルフォルダや SSH キーの保存先など、Moorly が使用できるフォルダをユーザ自身が正確に選択します。</td></tr>
+<tr><td>通知</td><td>ログ監視の通知です。</td></tr>
+</table>
+<p class="muted">許可しなかった場合は、<b>システム設定 › プライバシーとセキュリティ › オートメーション</b>で変更できます。</p>
+
+<h2 id="pro">無料版と Pro</h2>
+<p>無料版では、すべての機能を種類ごと（SFTP、FTP、WebDAV、S3、OneDrive、Dropbox）に 1 つの接続で利用できます。App 内課金の <b>Moorly Pro</b>（買い切り）を購入すると、この制限がなくなります。ローカルフォルダには制限はありません。</p>
+
+<h2 id="faq">よくある質問</h2>
+<h3>OneDrive の接続を保存すると「このアカウントには OneDrive がありません」と表示される</h3>
+<p>その個人用アカウントで OneDrive を一度も開いたことがありません。ブラウザで onedrive.live.com に一度サインインしてから、もう一度お試しください。職場または学校のアカウントには、OneDrive（Microsoft 365）のライセンスが必要です。</p>
+<h3>職場の Microsoft アカウントがブロックされる（「管理者の承認が必要」）</h3>
+<p>組織で外部アプリがブロックされています。管理者に Moorly の承認を依頼してください。</p>
+<h3>リストに警告（⚠︎）が表示される</h3>
+<p>サーバに接続できなかったか、サインインの有効期限が切れています。パネルで <b>…</b> › <b>やり直す</b>を選択するか、警告をクリックしてもう一度サインインしてください。</p>
+<h3>Finder で開いたフォルダが「最近」に表示されない</h3>
+<p>Finder の制御が許可されていることを確認してください（<a href="#permissions">アクセス権</a>を参照）。パネルにオレンジ色の通知が表示されている場合は、<b>オートメーション設定を開く…</b>をクリックします。</p>
+<h3>ショートカットメニューに Moorly の項目がない</h3>
+<p>これらの項目は Moorly でマウントしたサーバ内にのみ表示されます。iCloud Drive などのローカルフォルダには表示されません。</p>
+<h3>ジャンプホスト経由の SFTP 接続に失敗する</h3>
+<p>ジャンプホストの sshd で TCP 転送が許可されている必要があります（<code>AllowTcpForwarding yes</code>、デフォルト）。ホストには、ジャンプホストから見たアドレスを入力してください。</p>
+<h3>ログ監視の通知が届かない</h3>
+<p><b>システム設定 › 通知 › Moorly</b>で通知を許可してください。</p>
+
+<h2 id="contact">お問い合わせ</h2>
+<p><a href="mailto:giveing7777@gmail.com">giveing7777@gmail.com</a> にメールを送るか、<a href="https://github.com/jwss-lee/moorly/issues">GitHub Issues</a> で Issue を作成してください。その際、macOS のバージョンと発生した状況をお知らせください。パスワードやサーバのアドレスは含めないでください。</p>
+
+<footer class="muted">© 2026 JEAWOO LEE · <a href="../privacy.html#ja">プライバシーポリシー</a></footer>
+</div>
+</body>
+</html>
