@@ -109,7 +109,10 @@ Ele também funciona com pastas que já estão no seu Mac, como o iCloud Drive o
 <ul>
 <li>Nomes e conteúdos ficam ocultos. A quantidade de arquivos, o tamanho aproximado e as datas de modificação continuam visíveis no servidor.</li>
 <li>Dentro de um cofre não há compactação no servidor, links de compartilhamento nem logs em tempo real (o servidor não consegue ler os arquivos).</li>
-<li>Compatível com: cofres do Cryptomator formato 8 com AES-GCM (padrão atual do Cryptomator).</li>
+<li>Compatível com: cofres do Cryptomator formatos 7 e 8, com AES-GCM (padrão desde o Cryptomator 1.7) ou AES-CTR+HMAC (cofres antigos). Cofres criados com versões antigas do Cryptomator abrem e funcionam como estão.</li>
+<li><b>Bloquear</b>: no painel, <b>…</b> ao lado do cofre › <b>Bloquear Cofre</b>. Ele é desmontado e a chave é removida deste Mac; a senha será pedida na próxima vez. Em <b>Ajustes › Cofre do Cryptomator</b>, você pode bloquear os cofres automaticamente quando a tela for bloqueada ou o Mac entrar em repouso.</li>
+<li><b>Alterar senha</b>: <b>…</b> › <b>Alterar Senha do Cofre…</b>. Os arquivos não são criptografados de novo (só o arquivo de chave muda), então é instantâneo. Os apps do Cryptomator também passam a usar a nova senha.</li>
+<li><b>Chave de recuperação</b>: aparece ao criar um cofre (depois: <b>…</b> › <b>Mostrar Chave de Recuperação…</b>). Se esquecer a senha, escolha <b>Chave de recuperação</b> em <b>Alterar Senha do Cofre…</b> para definir uma nova. É uma chave do Moorly, diferente da chave em palavras dos apps do Cryptomator.</li>
 </ul>
 
 <h2 id="search">Busca de arquivos</h2>

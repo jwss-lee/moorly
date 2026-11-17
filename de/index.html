@@ -109,7 +109,10 @@ Moorly kann auch mit Ordnern arbeiten, die sich bereits auf Ihrem Mac befinden, 
 <ul>
 <li>Verborgen werden Namen und Inhalte. Anzahl der Dateien, ungefähre Größen und Änderungszeiten bleiben auf dem Server sichtbar.</li>
 <li>Serverseitiges Komprimieren, Freigabelinks und Live-Logs gibt es im Tresor nicht (der Server kann die Dateien nicht lesen).</li>
-<li>Unterstützt: Cryptomator-Tresorformat 8 mit AES-GCM (aktueller Cryptomator-Standard).</li>
+<li>Unterstützt: Cryptomator-Tresorformate 7 und 8 mit AES-GCM (Standard seit Cryptomator 1.7) oder AES-CTR+HMAC (ältere Tresore). Mit älteren Cryptomator-Versionen erstellte Tresore funktionieren unverändert.</li>
+<li><b>Sperren</b>: im Panel beim Tresor auf <b>…</b> › <b>Tresor sperren</b>. Er wird ausgehängt und sein Schlüssel von diesem Mac entfernt; beim nächsten Öffnen wird nach dem Passwort gefragt. Unter <b>Einstellungen › Cryptomator-Tresor</b> kannst du Tresore automatisch sperren, wenn der Bildschirm gesperrt wird oder der Mac in den Ruhezustand wechselt.</li>
+<li><b>Passwort ändern</b>: <b>…</b> › <b>Tresor-Passwort ändern …</b>. Dateien werden nicht neu verschlüsselt (nur die Tresor-Schlüsseldatei ändert sich), daher geht es sofort. Auch die Cryptomator-Apps verwenden dann das neue Passwort.</li>
+<li><b>Wiederherstellungsschlüssel</b>: wird beim Erstellen eines Tresors angezeigt (später: <b>…</b> › <b>Wiederherstellungsschlüssel anzeigen …</b>). Hast du das Passwort vergessen, wähle in <b>Tresor-Passwort ändern …</b> den <b>Wiederherstellungsschlüssel</b> und lege ein neues fest. Es ist ein Moorly-Schlüssel, anders als der Wort-Schlüssel der Cryptomator-Apps.</li>
 </ul>
 
 <h2 id="search">Dateisuche</h2>
