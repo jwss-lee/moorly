@@ -31,7 +31,7 @@ También puede trabajar con carpetas que ya están en tu Mac, como iCloud Drive 
 <li>Haz clic en <b>Montar</b> en la lista. La conexión aparece en <b>Ubicaciones</b>, en la barra lateral del Finder.</li>
 </ol>
 <div class="tip import-other"><b>Pasarte desde otra app</b>: en Gestionar conexiones, elige <b>⋯ › Importar de otras apps</b> para traer de una vez tu lista de servidores de FileZilla, Cyberduck o Mountain Duck, Transmit o <code>~/.ssh/config</code>. Los servidores SFTP se comprueban la primera vez que los montas.</div>
-<div class="tip icloud-sync"><b>Varios Mac</b>: activa <b>Ajustes › Sincronización con iCloud</b> y tu lista de servidores aparecerá en tus otros Mac con la misma cuenta de Apple. Para enviar también las contraseñas, activa <b>Sincronizar también contraseñas e inicios de sesión con el llavero de iCloud</b>. Cada Mac monta por separado.</div>
+<div class="tip icloud-sync"><b>Varios Mac</b>: activa <b>Ajustes › iCloud</b> y tu lista de servidores aparecerá en tus otros Mac con la misma cuenta de Apple. Para enviar también las contraseñas, activa <b>Sincronizar también contraseñas y datos de inicio de sesión</b>. Cada Mac monta por separado.</div>
 <div class="tip">Los archivos se descargan al abrirlos y se suben al guardarlos. Las contraseñas y los identificadores de inicio de sesión se guardan únicamente en el llavero de macOS.</div>
 <h3>Consejos para SFTP</h3>
 <ul>
@@ -45,14 +45,14 @@ También puede trabajar con carpetas que ya están en tu Mac, como iCloud Drive 
 <ul>
 <li><b>Servidores:</b> el punto de cada icono indica el estado: verde, montado; naranja, hay un problema; gris, no montado. Haz clic en una fila para abrir la última carpeta que viste. En <b>…</b> encontrarás Desmontar, Actualizar, Analizar el uso del disco, Abrir en Terminal y más.</li>
 <li><b>Carpetas:</b> para cada servidor, <b>★ Favoritos · 🔥 Frecuentes · 🕘 Recientes</b>. Mantén el puntero sobre una carpeta y haz clic en ☆ para añadirla a favoritos o quitarla.</li>
-<li><b>Frecuentes</b> muestra las carpetas que has abierto al menos dos veces en los últimos 30 días, empezando por las más abiertas. Define cuántas se muestran por servidor en <b>Ajustes › Menú</b>.</li>
+<li><b>Frecuentes</b> muestra las carpetas que has abierto al menos dos veces en los últimos 30 días, empezando por las más abiertas. Define cuántas se muestran por servidor en <b>Ajustes › Barra de menús</b>.</li>
 <li>Las carpetas que abre Moorly conservan su historial, así que ◀ (Atrás) y <kbd>⌘↑</kbd> del Finder te llevan a la carpeta contenedora.</li>
-<li class="li-transfers"><b>Transferencias</b>: haz clic en ⇅ arriba del panel (o en <b>Transferencias…</b> del menú contextual) para ver subidas y descargas, con progreso, motivo de los errores, <b>Reintentar</b> y <b>Pausar</b> por servidor. Las transferencias completadas desaparecen tras el periodo elegido en <b>Ajustes › Historial de transferencias</b> (1 día por omisión); las fallidas se mantienen hasta 7 días.</li>
+<li class="li-transfers"><b>Transferencias</b>: haz clic en ⇅ arriba del panel (o en <b>Transferencias…</b> del menú contextual) para ver subidas y descargas, con progreso, motivo de los errores, <b>Reintentar</b> y <b>Pausar</b> por servidor. Las transferencias completadas desaparecen tras el periodo elegido en <b>Ajustes › General › Conservar transferencias completadas durante</b> (1 día por omisión); las fallidas se mantienen hasta 7 días.</li>
 <li class="li-foldersync"><b>Sincronización de carpetas</b>: desde el menú <b>…</b> de un servidor o <b>Sincronización de carpetas…</b> en el menú contextual, compara una carpeta del Mac con una del servidor y transfiere solo lo que cambió. <b>Comparar</b> muestra antes una vista previa; los archivos cambiados por separado en el destino se indican como conflictos en lugar de sobrescribirse. En el Finder, haz clic con la tecla Control en una carpeta de un servidor montado › <b>Moorly: Sincronizar esta carpeta…</b> para abrirla con el servidor y la carpeta ya rellenados; solo tienes que elegir la carpeta del Mac. También con el botón <b>Sincronizar</b> de la parte inferior del panel.</li>
 </ul>
 
 <h3 id="groups">Muchos servidores: árbol y pestañas</h3>
-<p>En <b>Ajustes › Panel de la barra de menús › Visualización</b>, elige <b>Lista</b>, <b>Árbol</b> o <b>Pestañas</b>.</p>
+<p>En <b>Ajustes › Barra de menús › Mostrar servidores</b>, elige <b>Lista</b>, <b>Árbol</b> o <b>Pestañas</b>.</p>
 <ul>
 <li><b>Grupos</b>: define un grupo (por ejemplo, Producción o Desarrollo) en el campo <b>Grupo</b> del editor de conexión o desde <b>…</b> › <b>Grupo</b> en el servidor. Los servidores sin grupo se agrupan automáticamente en <b>Servidor</b> (SFTP, FTP, WebDAV) y <b>Nube</b> (S3, OneDrive, Dropbox); las carpetas locales tienen su propio grupo.</li>
 <li><b>Árbol</b>: pliega y despliega grupos y servidores con ▸. Al desplegar un servidor, sus carpetas favoritas, frecuentes y recientes aparecen justo debajo. El estado se recuerda.</li>
@@ -65,13 +65,13 @@ También puede trabajar con carpetas que ya están en tu Mac, como iCloud Drive 
 <ul>
 <li><b>Suéltalo sobre una carpeta</b> para subirlo ahí. Si ya existe un archivo con el mismo nombre, Moorly conserva ambos (“nombre 2”).</li>
 <li><b>Suéltalo sobre el título de un servidor</b> para elegir dónde subirlo.</li>
-<li>Para ver la lista completa desde el principio, cambia <b>Ajustes › Panel para soltar › Estilo</b>.</li>
+<li>Para ver la lista completa desde el principio, cambia <b>Ajustes › Barra de menús › Panel para soltar › Estilo</b>.</li>
 </ul>
 
 <h2 id="local">Carpetas locales (iCloud Drive · Google Drive · Box · carpetas compartidas)</h2>
 <p>Trabaja con carpetas que ya están en tu Mac como si fueran servidores. Aparecen en Recientes, Frecuentes y Favoritos, aceptan archivos que sueltes en ellas y se incluyen en la búsqueda de archivos.</p>
 <ol>
-<li>Haz clic en <b>Ajustes › Carpetas locales › Añadir carpeta…</b></li>
+<li>Haz clic en <b>Ajustes › Carpeta › Añadir carpeta…</b></li>
 <li>Elige la carpeta y haz clic en <b>Añadir esta carpeta</b>. (Por seguridad, macOS requiere que elijas cada carpeta una vez).</li>
 </ol>
 <table>
@@ -110,7 +110,7 @@ También puede trabajar con carpetas que ya están en tu Mac, como iCloud Drive 
 <li>Se ocultan los nombres y el contenido. El número de archivos, su tamaño aproximado y la fecha de modificación siguen visibles en el servidor.</li>
 <li>Dentro de una bóveda no se puede comprimir en el servidor ni usar enlaces para compartir o registros en directo (el servidor no puede leer los archivos).</li>
 <li>Compatible con: bóvedas de Cryptomator formato 7 y 8, con AES-GCM (predeterminado desde Cryptomator 1.7) o AES-CTR+HMAC (bóvedas antiguas). Las bóvedas creadas con versiones anteriores de Cryptomator se abren y funcionan tal cual.</li>
-<li><b>Bloquear</b>: en el panel, <b>…</b> junto a la bóveda › <b>Bloquear bóveda</b>. Se desmonta y su clave se elimina de este Mac, así que se pedirá la contraseña la próxima vez. En <b>Ajustes › Bóveda de Cryptomator</b> puedes bloquear las bóvedas automáticamente al bloquear la pantalla o al poner el Mac en reposo.</li>
+<li><b>Bloquear</b>: en el panel, <b>…</b> junto a la bóveda › <b>Bloquear bóveda</b>. Se desmonta y su clave se elimina de este Mac, así que se pedirá la contraseña la próxima vez. En <b>Ajustes › Bóveda</b> puedes bloquear las bóvedas automáticamente al bloquear la pantalla o al poner el Mac en reposo.</li>
 <li><b>Volver a verificar a diario</b>: en una bóveda, elige <b>…</b> › <b>Al volver a abrir</b> › <b>Bloquear a diario y desbloquear con Touch ID</b>. Se bloquea un día después de desbloquearla y la próxima vez se abre solo con tu huella. En un Mac sin Touch ID se usa la contraseña del Mac (o el Apple Watch). Con <b>desbloquear con la contraseña de la bóveda</b> se pide esa contraseña cada vez.</li>
 <li><b>Cambiar contraseña</b>: <b>…</b> › <b>Cambiar contraseña de la bóveda…</b>. Los archivos no se vuelven a cifrar (solo cambia el archivo de clave), así que es inmediato. Las apps de Cryptomator también usan la contraseña nueva. Con <b>Eliminar copia de la contraseña anterior</b> activado (predeterminado), la contraseña anterior ya no abre la bóveda; si lo desactivas, queda en el servidor una copia (<code>masterkey.cryptomator.bkup</code>) que se abre con la contraseña anterior.</li>
 <li><b>Clave de recuperación</b>: se muestra al crear una bóveda (después: <b>…</b> › <b>Mostrar clave de recuperación…</b>). Si olvidas la contraseña, elige <b>Clave de recuperación</b> en <b>Cambiar contraseña de la bóveda…</b> para establecer una nueva. Es una clave de Moorly, distinta de la clave con palabras de las apps de Cryptomator.</li>
@@ -151,7 +151,7 @@ También puede trabajar con carpetas que ya están en tu Mac, como iCloud Drive 
 <h2 id="permissions">Permisos: ¿por qué pregunta macOS?</h2>
 <table>
 <tr><th>Lo que pregunta macOS</th><th>Por qué</th></tr>
-<tr><td>“Moorly quiere controlar Finder”</td><td>Para registrar las carpetas recientes y frecuentes, Moorly comprueba qué carpeta muestra la ventana del Finder en primer plano. Solo lo hace mientras el Finder está en primer plano y nunca toca tus archivos. Para desactivarlo: <b>Ajustes › Menú › Registrar las carpetas abiertas en el Finder</b></td></tr>
+<tr><td>“Moorly quiere controlar Finder”</td><td>Para registrar las carpetas recientes y frecuentes, Moorly comprueba qué carpeta muestra la ventana del Finder en primer plano. Solo lo hace mientras el Finder está en primer plano y nunca toca tus archivos. Para desactivarlo: <b>Ajustes › Barra de menús › Recordar carpetas abiertas en Finder</b></td></tr>
 <tr><td>“Moorly quiere controlar iTerm2 (Terminal)”</td><td>Para enviar un comando <code>ssh</code> cuando abres un servidor en el terminal.</td></tr>
 <tr><td>Un selector de carpetas</td><td>Tú eliges exactamente qué carpetas puede usar Moorly, como las carpetas locales o dónde guardar una clave SSH.</td></tr>
 <tr><td>Notificaciones</td><td>Avisos de vigilancia de registros.</td></tr>

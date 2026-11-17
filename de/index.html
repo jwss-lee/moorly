@@ -31,7 +31,7 @@ Moorly kann auch mit Ordnern arbeiten, die sich bereits auf Ihrem Mac befinden, 
 <li>Klicken Sie in der Liste auf <b>Einbinden</b>. Die Verbindung wird in der Seitenleiste des Finder unter <b>Orte</b> angezeigt.</li>
 </ol>
 <div class="tip import-other"><b>Umstieg von einer anderen App</b>: Wähle unter „Verbindungen verwalten“ <b>⋯ › Aus anderen Apps importieren</b>, um deine Serverliste aus FileZilla, Cyberduck oder Mountain Duck, Transmit oder <code>~/.ssh/config</code> auf einmal zu übernehmen. SFTP-Server werden beim ersten Aktivieren geprüft.</div>
-<div class="tip icloud-sync"><b>Mehrere Macs</b>: Aktiviere <b>Einstellungen › iCloud-Synchronisierung</b>, dann erscheint deine Serverliste auf deinen anderen Macs mit demselben Apple Account. Für Passwörter aktiviere zusätzlich <b>Auch Passwörter und Anmeldungen über den iCloud-Schlüsselbund</b>. Jeder Mac aktiviert separat.</div>
+<div class="tip icloud-sync"><b>Mehrere Macs</b>: Aktiviere <b>Einstellungen › iCloud</b>, dann erscheint deine Serverliste auf deinen anderen Macs mit demselben Apple Account. Für Passwörter aktiviere zusätzlich <b>Auch Passwörter und Anmeldedaten synchronisieren</b>. Jeder Mac aktiviert separat.</div>
 <div class="tip">Dateien werden beim Öffnen geladen und beim Sichern hochgeladen. Passwörter und Anmelde-Tokens werden ausschließlich im macOS-Schlüsselbund gespeichert.</div>
 <h3>Tipps für SFTP</h3>
 <ul>
@@ -45,14 +45,14 @@ Moorly kann auch mit Ordnern arbeiten, die sich bereits auf Ihrem Mac befinden, 
 <ul>
 <li><b>Server:</b> Der Punkt am Symbol zeigt den Status an – grün eingebunden, orange ein Problem, grau nicht eingebunden. Klicken Sie auf eine Zeile, um den zuletzt angezeigten Ordner zu öffnen. Unter <b>…</b> finden Sie „Auswerfen“, „Aktualisieren“, „Speicherbelegung analysieren“, „In Terminal öffnen“ und mehr.</li>
 <li><b>Ordner:</b> Für jeden Server <b>★ Favoriten · 🔥 Häufig · 🕘 Zuletzt</b>. Bewegen Sie den Zeiger auf einen Ordner und klicken Sie auf ☆, um ihn zu den Favoriten hinzuzufügen oder daraus zu entfernen.</li>
-<li><b>Häufig</b> listet Ordner auf, die Sie in den letzten 30 Tagen mindestens zweimal geöffnet haben – die am häufigsten geöffneten zuerst. Wie viele pro Server angezeigt werden, legen Sie unter <b>Einstellungen › Menü</b> fest.</li>
+<li><b>Häufig</b> listet Ordner auf, die Sie in den letzten 30 Tagen mindestens zweimal geöffnet haben – die am häufigsten geöffneten zuerst. Wie viele pro Server angezeigt werden, legen Sie unter <b>Einstellungen › Menüleiste</b> fest.</li>
 <li>Von Moorly geöffnete Ordner behalten ihren Verlauf, sodass Sie mit ◀ (Zurück) und <kbd>⌘↑</kbd> im Finder zum übergeordneten Ordner gelangen.</li>
-<li class="li-transfers"><b>Übertragungen</b>: Klicke oben im Bereich auf ⇅ (oder im Kontextmenü auf <b>Übertragungen …</b>), um Up- und Downloads mit Fortschritt, Fehlergrund, <b>Erneut versuchen</b> und <b>Anhalten</b> pro Server zu sehen. Abgeschlossene Übertragungen verschwinden nach dem Zeitraum unter <b>Einstellungen › Übertragungsverlauf</b> (standardmäßig 1 Tag); fehlgeschlagene bleiben bis zu 7 Tage.</li>
+<li class="li-transfers"><b>Übertragungen</b>: Klicke oben im Bereich auf ⇅ (oder im Kontextmenü auf <b>Übertragungen …</b>), um Up- und Downloads mit Fortschritt, Fehlergrund, <b>Erneut versuchen</b> und <b>Anhalten</b> pro Server zu sehen. Abgeschlossene Übertragungen verschwinden nach dem Zeitraum unter <b>Einstellungen › Allgemein › Abgeschlossene Übertragungen behalten für</b> (standardmäßig 1 Tag); fehlgeschlagene bleiben bis zu 7 Tage.</li>
 <li class="li-foldersync"><b>Ordner-Synchronisierung</b>: Über das <b>…</b>-Menü eines Servers oder <b>Ordner-Synchronisierung …</b> im Kontextmenü vergleichst du einen Mac-Ordner mit einem Serverordner und überträgst nur Geändertes. <b>Vergleichen</b> zeigt zuerst eine Vorschau; auf der Zielseite separat geänderte Dateien werden als Konflikt gemeldet statt überschrieben. Klicke im Finder bei gedrückter Ctrl-Taste auf einen Ordner eines eingebundenen Servers › <b>Moorly: Diesen Ordner synchronisieren …</b>, um sie mit ausgefülltem Server und Serverordner zu öffnen – du wählst nur noch den Mac-Ordner. Auch über die Taste <b>Synchronisieren</b> unten im Panel.</li>
 </ul>
 
 <h3 id="groups">Viele Server: Baum und Tabs</h3>
-<p>Unter <b>Einstellungen › Menüleisten-Bereich › Darstellung</b> wählst du <b>Liste</b>, <b>Baum</b> oder <b>Tabs</b>.</p>
+<p>Unter <b>Einstellungen › Menüleiste › Server anzeigen als</b> wählst du <b>Liste</b>, <b>Baum</b> oder <b>Tabs</b>.</p>
 <ul>
 <li><b>Gruppen</b>: Lege eine Gruppe (z. B. Produktion oder Entwicklung) im Feld <b>Gruppe</b> des Verbindungseditors oder über <b>…</b> › <b>Gruppe</b> beim Server fest. Server ohne Gruppe werden automatisch unter <b>Server</b> (SFTP, FTP, WebDAV) und <b>Cloud</b> (S3, OneDrive, Dropbox) zusammengefasst; lokale Ordner bilden eine eigene Gruppe.</li>
 <li><b>Baum</b>: Gruppen und Server mit ▸ ein- und ausklappen. Klappst du einen Server auf, erscheinen direkt darunter seine Favoriten sowie häufig und zuletzt verwendete Ordner. Der Zustand bleibt erhalten.</li>
@@ -65,13 +65,13 @@ Moorly kann auch mit Ordnern arbeiten, die sich bereits auf Ihrem Mac befinden, 
 <ul>
 <li><b>Auf einem Ordner ablegen</b>, um die Datei dorthin hochzuladen. Ist bereits eine Datei mit demselben Namen vorhanden, behält Moorly beide („Name 2“).</li>
 <li><b>Auf dem Titel eines Servers ablegen</b>, um den Upload-Ort auszuwählen.</li>
-<li>Damit sofort die vollständige Liste angezeigt wird, ändern Sie <b>Einstellungen › Drop-Bereich › Stil</b>.</li>
+<li>Damit sofort die vollständige Liste angezeigt wird, ändern Sie <b>Einstellungen › Menüleiste › Drop-Bereich › Stil</b>.</li>
 </ul>
 
 <h2 id="local">Lokale Ordner (iCloud Drive · Google Drive · Box · freigegebene Ordner)</h2>
 <p>Arbeiten Sie mit Ordnern, die sich bereits auf Ihrem Mac befinden, als wären es Server. Sie erscheinen unter „Zuletzt“, „Häufig“ und „Favoriten“, nehmen abgelegte Dateien an und werden in die Dateisuche einbezogen.</p>
 <ol>
-<li>Klicken Sie auf <b>Einstellungen › Lokale Ordner › Ordner hinzufügen …</b></li>
+<li>Klicken Sie auf <b>Einstellungen › Ordner › Ordner hinzufügen …</b></li>
 <li>Wählen Sie den Ordner aus und klicken Sie auf <b>Diesen Ordner hinzufügen</b>. (Aus Sicherheitsgründen verlangt macOS, dass Sie jeden Ordner einmal selbst auswählen.)</li>
 </ol>
 <table>
@@ -110,7 +110,7 @@ Moorly kann auch mit Ordnern arbeiten, die sich bereits auf Ihrem Mac befinden, 
 <li>Verborgen werden Namen und Inhalte. Anzahl der Dateien, ungefähre Größen und Änderungszeiten bleiben auf dem Server sichtbar.</li>
 <li>Serverseitiges Komprimieren, Freigabelinks und Live-Logs gibt es im Tresor nicht (der Server kann die Dateien nicht lesen).</li>
 <li>Unterstützt: Cryptomator-Tresorformate 7 und 8 mit AES-GCM (Standard seit Cryptomator 1.7) oder AES-CTR+HMAC (ältere Tresore). Mit älteren Cryptomator-Versionen erstellte Tresore funktionieren unverändert.</li>
-<li><b>Sperren</b>: im Panel beim Tresor auf <b>…</b> › <b>Tresor sperren</b>. Er wird ausgehängt und sein Schlüssel von diesem Mac entfernt; beim nächsten Öffnen wird nach dem Passwort gefragt. Unter <b>Einstellungen › Cryptomator-Tresor</b> kannst du Tresore automatisch sperren, wenn der Bildschirm gesperrt wird oder der Mac in den Ruhezustand wechselt.</li>
+<li><b>Sperren</b>: im Panel beim Tresor auf <b>…</b> › <b>Tresor sperren</b>. Er wird ausgehängt und sein Schlüssel von diesem Mac entfernt; beim nächsten Öffnen wird nach dem Passwort gefragt. Unter <b>Einstellungen › Tresor</b> kannst du Tresore automatisch sperren, wenn der Bildschirm gesperrt wird oder der Mac in den Ruhezustand wechselt.</li>
 <li><b>Täglich erneut bestätigen</b>: Wähle beim Tresor <b>…</b> › <b>Erneut öffnen</b> › <b>Täglich sperren, mit Touch ID entsperren</b>. Er wird einen Tag nach dem Entsperren gesperrt und lässt sich danach per Fingerabdruck öffnen. Macs ohne Touch ID verwenden das Mac-Anmeldepasswort (oder die Apple Watch). Mit <b>mit Tresor-Passwort entsperren</b> wird jedes Mal nach dem Tresor-Passwort gefragt.</li>
 <li><b>Passwort ändern</b>: <b>…</b> › <b>Tresor-Passwort ändern …</b>. Dateien werden nicht neu verschlüsselt (nur die Tresor-Schlüsseldatei ändert sich), daher geht es sofort. Auch die Cryptomator-Apps verwenden dann das neue Passwort. Ist <b>Sicherung des alten Passworts löschen</b> aktiviert (Standard), öffnet das alte Passwort den Tresor nicht mehr; sonst bleibt eine Kopie (<code>masterkey.cryptomator.bkup</code>) auf dem Server, die sich mit dem alten Passwort öffnen lässt.</li>
 <li><b>Wiederherstellungsschlüssel</b>: wird beim Erstellen eines Tresors angezeigt (später: <b>…</b> › <b>Wiederherstellungsschlüssel anzeigen …</b>). Hast du das Passwort vergessen, wähle in <b>Tresor-Passwort ändern …</b> den <b>Wiederherstellungsschlüssel</b> und lege ein neues fest. Es ist ein Moorly-Schlüssel, anders als der Wort-Schlüssel der Cryptomator-Apps.</li>
@@ -151,7 +151,7 @@ Moorly kann auch mit Ordnern arbeiten, die sich bereits auf Ihrem Mac befinden, 
 <h2 id="permissions">Berechtigungen – warum fragt macOS?</h2>
 <table>
 <tr><th>Was macOS fragt</th><th>Grund</th></tr>
-<tr><td>„Moorly möchte Finder steuern“</td><td>Um zuletzt und häufig benutzte Ordner zu erfassen, prüft Moorly, welchen Ordner das vorderste Finder-Fenster anzeigt – nur, solange der Finder im Vordergrund ist, und ohne jemals Ihre Dateien zu verändern. Deaktivieren: <b>Einstellungen › Menü › Im Finder geöffnete Ordner erfassen</b></td></tr>
+<tr><td>„Moorly möchte Finder steuern“</td><td>Um zuletzt und häufig benutzte Ordner zu erfassen, prüft Moorly, welchen Ordner das vorderste Finder-Fenster anzeigt – nur, solange der Finder im Vordergrund ist, und ohne jemals Ihre Dateien zu verändern. Deaktivieren: <b>Einstellungen › Menüleiste › In Finder geöffnete Ordner merken</b></td></tr>
 <tr><td>„Moorly möchte iTerm2 (Terminal) steuern“</td><td>Um einen <code>ssh</code>-Befehl zu senden, wenn Sie einen Server im Terminal öffnen.</td></tr>
 <tr><td>Eine Ordnerauswahl</td><td>Sie legen genau fest, welche Ordner Moorly verwenden darf, etwa lokale Ordner oder den Speicherort eines SSH-Schlüssels.</td></tr>
 <tr><td>Mitteilungen</td><td>Hinweise der Log-Überwachung.</td></tr>

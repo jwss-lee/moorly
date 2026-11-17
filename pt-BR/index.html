@@ -31,7 +31,7 @@ Ele também funciona com pastas que já estão no seu Mac, como o iCloud Drive o
 <li>Clique em <b>Montar</b> na lista. A conexão aparece em <b>Localizações</b> na barra lateral do Finder.</li>
 </ol>
 <div class="tip import-other"><b>Vindo de outro app</b>: em Gerenciar conexões, escolha <b>⋯ › Importar de outros apps</b> para trazer de uma vez sua lista de servidores do FileZilla, Cyberduck ou Mountain Duck, Transmit ou <code>~/.ssh/config</code>. Servidores SFTP são verificados na primeira vez que você monta.</div>
-<div class="tip icloud-sync"><b>Vários Macs</b>: ative <b>Ajustes › Sincronização do iCloud</b> e sua lista de servidores aparece nos outros Macs com a mesma Conta Apple. Para enviar também as senhas, ative <b>Sincronizar também senhas e logins com as Chaves do iCloud</b>. Cada Mac monta separadamente.</div>
+<div class="tip icloud-sync"><b>Vários Macs</b>: ative <b>Ajustes › iCloud</b> e sua lista de servidores aparece nos outros Macs com a mesma Conta Apple. Para enviar também as senhas, ative <b>Sincronizar também senhas e dados de login</b>. Cada Mac monta separadamente.</div>
 <div class="tip">Os arquivos são baixados quando você os abre e enviados quando você os salva. As senhas e os tokens de início de sessão são armazenados somente nas Chaves do macOS.</div>
 <h3>Dicas de SFTP</h3>
 <ul>
@@ -45,14 +45,14 @@ Ele também funciona com pastas que já estão no seu Mac, como o iCloud Drive o
 <ul>
 <li><b>Servidores:</b> o ponto em cada ícone mostra o estado — verde, montado; laranja, há um problema; cinza, não montado. Clique em uma linha para abrir a última pasta visualizada. <b>…</b> oferece Desmontar, Atualizar, Analisar Uso do Disco, Abrir no Terminal e mais.</li>
 <li><b>Pastas:</b> para cada servidor, <b>★ Favoritos · 🔥 Frequentes · 🕘 Recentes</b>. Mantenha o cursor sobre uma pasta e clique em ☆ para adicioná-la ou removê-la dos favoritos.</li>
-<li><b>Frequentes</b> lista as pastas que você abriu pelo menos duas vezes nos últimos 30 dias, das mais abertas para as menos abertas. Defina quantas mostrar por servidor em <b>Ajustes › Menu</b>.</li>
+<li><b>Frequentes</b> lista as pastas que você abriu pelo menos duas vezes nos últimos 30 dias, das mais abertas para as menos abertas. Defina quantas mostrar por servidor em <b>Ajustes › Barra de Menus</b>.</li>
 <li>As pastas abertas pelo Moorly mantêm o histórico, então o botão ◀ (Voltar) do Finder e <kbd>⌘↑</kbd> levam você à pasta que as contém.</li>
-<li class="li-transfers"><b>Transferências</b>: clique em ⇅ no topo do painel (ou em <b>Transferências…</b> no menu de contexto) para ver envios e downloads, com progresso, motivo das falhas, <b>Tentar Novamente</b> e <b>Pausar</b> por servidor. As transferências concluídas somem após o período definido em <b>Ajustes › Histórico de transferências</b> (1 dia por padrão); as que falharam ficam por até 7 dias.</li>
+<li class="li-transfers"><b>Transferências</b>: clique em ⇅ no topo do painel (ou em <b>Transferências…</b> no menu de contexto) para ver envios e downloads, com progresso, motivo das falhas, <b>Tentar Novamente</b> e <b>Pausar</b> por servidor. As transferências concluídas somem após o período definido em <b>Ajustes › Geral › Manter transferências concluídas por</b> (1 dia por padrão); as que falharam ficam por até 7 dias.</li>
 <li class="li-foldersync"><b>Sincronização de Pastas</b>: no menu <b>…</b> de um servidor ou em <b>Sincronização de Pastas…</b> no menu de contexto, compare uma pasta do Mac com uma do servidor e transfira só o que mudou. <b>Comparar</b> mostra antes uma prévia; arquivos alterados à parte no destino aparecem como conflito em vez de serem sobrescritos. No Finder, clique com a tecla Control em uma pasta de um servidor montado › <b>Moorly: Sincronizar Esta Pasta…</b> para abrir com o servidor e a pasta já preenchidos; basta escolher a pasta do Mac. Também pelo botão <b>Sincronizar</b> na parte de baixo do painel.</li>
 </ul>
 
 <h3 id="groups">Muitos servidores: árvore e abas</h3>
-<p>Em <b>Ajustes › Painel da barra de menus › Visualização</b>, escolha <b>Lista</b>, <b>Árvore</b> ou <b>Abas</b>.</p>
+<p>Em <b>Ajustes › Barra de Menus › Mostrar servidores</b>, escolha <b>Lista</b>, <b>Árvore</b> ou <b>Abas</b>.</p>
 <ul>
 <li><b>Grupos</b>: defina um grupo (por exemplo, Produção ou Desenvolvimento) no campo <b>Grupo</b> do editor de conexão ou em <b>…</b> › <b>Grupo</b> no servidor. Servidores sem grupo são agrupados automaticamente em <b>Servidor</b> (SFTP, FTP, WebDAV) e <b>Nuvem</b> (S3, OneDrive, Dropbox); pastas locais têm seu próprio grupo.</li>
 <li><b>Árvore</b>: recolha e expanda grupos e servidores com ▸. Ao expandir um servidor, as pastas favoritas, frequentes e recentes dele aparecem logo abaixo. O estado fica salvo.</li>
@@ -65,13 +65,13 @@ Ele também funciona com pastas que já estão no seu Mac, como o iCloud Drive o
 <ul>
 <li><b>Solte em uma pasta</b> para enviar o arquivo para ela. Se já existir um arquivo com o mesmo nome, o Moorly mantém os dois (“nome 2”).</li>
 <li><b>Solte no título de um servidor</b> para escolher onde enviar.</li>
-<li>Para mostrar a lista completa imediatamente, altere <b>Ajustes › Painel de Arraste › Estilo</b>.</li>
+<li>Para mostrar a lista completa imediatamente, altere <b>Ajustes › Barra de Menus › Painel de Arraste › Estilo</b>.</li>
 </ul>
 
 <h2 id="local">Pastas locais (iCloud Drive · Google Drive · Box · pastas compartilhadas)</h2>
 <p>Trabalhe com pastas que já estão no seu Mac como se fossem servidores. Elas aparecem em Recentes, Frequentes e Favoritos, aceitam arquivos soltos e são incluídas na busca de arquivos.</p>
 <ol>
-<li>Clique em <b>Ajustes › Pastas Locais › Adicionar Pasta…</b></li>
+<li>Clique em <b>Ajustes › Pasta › Adicionar Pasta…</b></li>
 <li>Escolha a pasta e clique em <b>Adicionar Esta Pasta</b>. (Por segurança, o macOS exige que você escolha cada pasta uma vez.)</li>
 </ol>
 <table>
@@ -110,7 +110,7 @@ Ele também funciona com pastas que já estão no seu Mac, como o iCloud Drive o
 <li>Nomes e conteúdos ficam ocultos. A quantidade de arquivos, o tamanho aproximado e as datas de modificação continuam visíveis no servidor.</li>
 <li>Dentro de um cofre não há compactação no servidor, links de compartilhamento nem logs em tempo real (o servidor não consegue ler os arquivos).</li>
 <li>Compatível com: cofres do Cryptomator formatos 7 e 8, com AES-GCM (padrão desde o Cryptomator 1.7) ou AES-CTR+HMAC (cofres antigos). Cofres criados com versões antigas do Cryptomator abrem e funcionam como estão.</li>
-<li><b>Bloquear</b>: no painel, <b>…</b> ao lado do cofre › <b>Bloquear Cofre</b>. Ele é desmontado e a chave é removida deste Mac; a senha será pedida na próxima vez. Em <b>Ajustes › Cofre do Cryptomator</b>, você pode bloquear os cofres automaticamente quando a tela for bloqueada ou o Mac entrar em repouso.</li>
+<li><b>Bloquear</b>: no painel, <b>…</b> ao lado do cofre › <b>Bloquear Cofre</b>. Ele é desmontado e a chave é removida deste Mac; a senha será pedida na próxima vez. Em <b>Ajustes › Cofre</b>, você pode bloquear os cofres automaticamente quando a tela for bloqueada ou o Mac entrar em repouso.</li>
 <li><b>Verificar de novo diariamente</b>: em um cofre, escolha <b>…</b> › <b>Ao reabrir</b> › <b>Bloquear diariamente e desbloquear com o Touch ID</b>. Ele é bloqueado um dia depois de desbloqueado e, na próxima vez, abre só com a sua digital. Em Macs sem Touch ID, é usada a senha de login do Mac (ou o Apple Watch). Com <b>desbloquear com a senha do cofre</b>, a senha do cofre é pedida toda vez.</li>
 <li><b>Alterar senha</b>: <b>…</b> › <b>Alterar Senha do Cofre…</b>. Os arquivos não são criptografados de novo (só o arquivo de chave muda), então é instantâneo. Os apps do Cryptomator também passam a usar a nova senha. Com <b>Apagar Backup da Senha Antiga</b> ativado (padrão), a senha antiga não abre mais o cofre; se desativar, fica no servidor uma cópia (<code>masterkey.cryptomator.bkup</code>) que abre com a senha antiga.</li>
 <li><b>Chave de recuperação</b>: aparece ao criar um cofre (depois: <b>…</b> › <b>Mostrar Chave de Recuperação…</b>). Se esquecer a senha, escolha <b>Chave de recuperação</b> em <b>Alterar Senha do Cofre…</b> para definir uma nova. É uma chave do Moorly, diferente da chave em palavras dos apps do Cryptomator.</li>
@@ -151,7 +151,7 @@ Ele também funciona com pastas que já estão no seu Mac, como o iCloud Drive o
 <h2 id="permissions">Permissões — por que o macOS pergunta?</h2>
 <table>
 <tr><th>O que o macOS pergunta</th><th>Por quê</th></tr>
-<tr><td>“Moorly deseja controlar o Finder”</td><td>Para registrar as pastas recentes e frequentes, o Moorly verifica qual pasta a janela do Finder em primeiro plano está mostrando — somente enquanto o Finder está em primeiro plano, e ele nunca mexe nos seus arquivos. Para desativar: <b>Ajustes › Menu › Registrar Pastas Abertas no Finder</b></td></tr>
+<tr><td>“Moorly deseja controlar o Finder”</td><td>Para registrar as pastas recentes e frequentes, o Moorly verifica qual pasta a janela do Finder em primeiro plano está mostrando — somente enquanto o Finder está em primeiro plano, e ele nunca mexe nos seus arquivos. Para desativar: <b>Ajustes › Barra de Menus › Lembrar pastas abertas no Finder</b></td></tr>
 <tr><td>“Moorly deseja controlar o iTerm2 (Terminal)”</td><td>Para enviar um comando <code>ssh</code> quando você abre um servidor no terminal.</td></tr>
 <tr><td>Um seletor de pastas</td><td>Você escolhe exatamente quais pastas o Moorly pode usar, como pastas locais ou onde salvar uma chave SSH.</td></tr>
 <tr><td>Notificações</td><td>Alertas do monitoramento de logs.</td></tr>

@@ -31,7 +31,7 @@ Moorly fonctionne aussi avec des dossiers déjà présents sur votre Mac, comme 
 <li>Cliquez sur <b>Monter</b> dans la liste. La connexion apparaît sous <b>Emplacements</b> dans la barre latérale du Finder.</li>
 </ol>
 <div class="tip import-other"><b>Venir d’une autre app</b> : dans Gérer les connexions, choisissez <b>⋯ › Importer depuis d’autres apps</b> pour reprendre d’un coup votre liste de serveurs de FileZilla, Cyberduck ou Mountain Duck, Transmit ou <code>~/.ssh/config</code>. Les serveurs SFTP sont vérifiés au premier montage.</div>
-<div class="tip icloud-sync"><b>Plusieurs Mac</b> : activez <b>Réglages › Synchronisation iCloud</b> et votre liste de serveurs apparaît sur vos autres Mac connectés au même compte Apple. Pour envoyer aussi les mots de passe, activez <b>Synchroniser aussi les mots de passe et connexions avec le trousseau iCloud</b>. Chaque Mac monte séparément.</div>
+<div class="tip icloud-sync"><b>Plusieurs Mac</b> : activez <b>Réglages › iCloud</b> et votre liste de serveurs apparaît sur vos autres Mac connectés au même compte Apple. Pour envoyer aussi les mots de passe, activez <b>Synchroniser aussi les mots de passe et identifiants</b>. Chaque Mac monte séparément.</div>
 <div class="tip">Les fichiers sont téléchargés lorsque vous les ouvrez et envoyés lorsque vous les enregistrez. Les mots de passe et les jetons de connexion sont stockés uniquement dans le trousseau macOS.</div>
 <h3>Conseils pour SFTP</h3>
 <ul>
@@ -45,14 +45,14 @@ Moorly fonctionne aussi avec des dossiers déjà présents sur votre Mac, comme 
 <ul>
 <li><b>Serveurs&nbsp;:</b> la pastille sur chaque icône indique l’état&nbsp;: vert pour monté, orange en cas de problème, gris pour non monté. Cliquez sur une ligne pour ouvrir le dernier dossier consulté. <b>…</b> propose Démonter, Actualiser, Analyser l’utilisation du disque, Ouvrir dans Terminal, et plus encore.</li>
 <li><b>Dossiers&nbsp;:</b> pour chaque serveur, <b>★ Favoris · 🔥 Fréquents · 🕘 Récents</b>. Placez le pointeur sur un dossier et cliquez sur ☆ pour l’ajouter aux favoris ou l’en retirer.</li>
-<li><b>Fréquents</b> répertorie les dossiers que vous avez ouverts au moins deux fois au cours des 30 derniers jours, les plus ouverts en premier. Choisissez combien en afficher par serveur dans <b>Réglages › Menu</b>.</li>
+<li><b>Fréquents</b> répertorie les dossiers que vous avez ouverts au moins deux fois au cours des 30 derniers jours, les plus ouverts en premier. Choisissez combien en afficher par serveur dans <b>Réglages › Barre des menus</b>.</li>
 <li>Les dossiers ouverts par Moorly conservent leur historique&nbsp;: le bouton ◀ (Précédent) du Finder et <kbd>⌘↑</kbd> vous ramènent au dossier parent.</li>
-<li class="li-transfers"><b>Transferts</b> : cliquez sur ⇅ en haut du panneau (ou <b>Transferts…</b> dans le menu contextuel) pour voir les envois et téléchargements, avec progression, raison des échecs, <b>Réessayer</b> et <b>Suspendre</b> par serveur. Les transferts terminés disparaissent après la durée choisie dans <b>Réglages › Historique des transferts</b> (1 jour par défaut) ; les transferts échoués restent jusqu’à 7 jours.</li>
+<li class="li-transfers"><b>Transferts</b> : cliquez sur ⇅ en haut du panneau (ou <b>Transferts…</b> dans le menu contextuel) pour voir les envois et téléchargements, avec progression, raison des échecs, <b>Réessayer</b> et <b>Suspendre</b> par serveur. Les transferts terminés disparaissent après la durée choisie dans <b>Réglages › Général › Conserver les transferts terminés pendant</b> (1 jour par défaut) ; les transferts échoués restent jusqu’à 7 jours.</li>
 <li class="li-foldersync"><b>Synchronisation de dossiers</b> : depuis le menu <b>…</b> d’un serveur ou <b>Synchronisation de dossiers…</b> dans le menu contextuel, comparez un dossier du Mac à un dossier du serveur et transférez uniquement ce qui a changé. <b>Comparer</b> affiche d’abord un aperçu ; les fichiers modifiés de leur côté sont signalés comme conflits au lieu d’être écrasés. Dans le Finder, cliquez avec la touche Contrôle sur un dossier d’un serveur monté › <b>Moorly : Synchroniser ce dossier…</b> pour l’ouvrir avec le serveur et le dossier déjà renseignés ; il ne reste qu’à choisir le dossier du Mac. Le bouton <b>Synchroniser</b> en bas du panneau l’ouvre aussi.</li>
 </ul>
 
 <h3 id="groups">Beaucoup de serveurs : arborescence et onglets</h3>
-<p>Dans <b>Réglages › Panneau de la barre des menus › Présentation</b>, choisissez <b>Liste</b>, <b>Arborescence</b> ou <b>Onglets</b>.</p>
+<p>Dans <b>Réglages › Barre des menus › Afficher les serveurs</b>, choisissez <b>Liste</b>, <b>Arborescence</b> ou <b>Onglets</b>.</p>
 <ul>
 <li><b>Groupes</b> : définissez un groupe (par exemple, Production ou Développement) dans le champ <b>Groupe</b> de l’éditeur de connexion ou via <b>…</b> › <b>Groupe</b> sur le serveur. Les serveurs sans groupe sont classés automatiquement dans <b>Serveur</b> (SFTP, FTP, WebDAV) et <b>Cloud</b> (S3, OneDrive, Dropbox) ; les dossiers locaux ont leur propre groupe.</li>
 <li><b>Arborescence</b> : repliez et dépliez les groupes et les serveurs avec ▸. Dépliez un serveur pour voir juste en dessous ses dossiers favoris, fréquents et récents. L’état est mémorisé.</li>
@@ -65,13 +65,13 @@ Moorly fonctionne aussi avec des dossiers déjà présents sur votre Mac, comme 
 <ul>
 <li><b>Déposez-le sur un dossier</b> pour l’y envoyer. Si un fichier du même nom existe, Moorly conserve les deux («&nbsp;nom 2&nbsp;»).</li>
 <li><b>Déposez-le sur le titre d’un serveur</b> pour choisir l’emplacement d’envoi.</li>
-<li>Pour afficher directement la liste complète, modifiez <b>Réglages › Panneau de dépôt › Style</b>.</li>
+<li>Pour afficher directement la liste complète, modifiez <b>Réglages › Barre des menus › Panneau de dépôt › Style</b>.</li>
 </ul>
 
 <h2 id="local">Dossiers locaux (iCloud Drive · Google Drive · Box · dossiers partagés)</h2>
 <p>Utilisez les dossiers déjà présents sur votre Mac comme s’il s’agissait de serveurs. Ils apparaissent dans Récents, Fréquents et Favoris, acceptent les fichiers déposés et sont inclus dans la recherche de fichiers.</p>
 <ol>
-<li>Cliquez sur <b>Réglages › Dossiers locaux › Ajouter un dossier…</b></li>
+<li>Cliquez sur <b>Réglages › Dossier › Ajouter un dossier…</b></li>
 <li>Choisissez le dossier et cliquez sur <b>Ajouter ce dossier</b>. (La sécurité de macOS exige que vous choisissiez chaque dossier une fois.)</li>
 </ol>
 <table>
@@ -110,7 +110,7 @@ Moorly fonctionne aussi avec des dossiers déjà présents sur votre Mac, comme 
 <li>Les noms et les contenus sont masqués. Le nombre de fichiers, leur taille approximative et leurs dates de modification restent visibles sur le serveur.</li>
 <li>La compression côté serveur, les liens de partage et les journaux en direct ne sont pas disponibles dans un coffre (le serveur ne peut pas lire les fichiers).</li>
 <li>Formats pris en charge : coffres Cryptomator 7 et 8, en AES-GCM (par défaut depuis Cryptomator 1.7) ou AES-CTR+HMAC (anciens coffres). Les coffres créés avec d’anciennes versions de Cryptomator s’ouvrent et fonctionnent tels quels.</li>
-<li><b>Verrouiller</b> : dans le panneau, <b>…</b> à côté du coffre › <b>Verrouiller le coffre</b>. Il est démonté et sa clé est supprimée de ce Mac ; le mot de passe sera demandé à la prochaine ouverture. Dans <b>Réglages › Coffre-fort Cryptomator</b>, vous pouvez verrouiller les coffres automatiquement lorsque l’écran se verrouille ou que le Mac se met en veille.</li>
+<li><b>Verrouiller</b> : dans le panneau, <b>…</b> à côté du coffre › <b>Verrouiller le coffre</b>. Il est démonté et sa clé est supprimée de ce Mac ; le mot de passe sera demandé à la prochaine ouverture. Dans <b>Réglages › Coffre-fort</b>, vous pouvez verrouiller les coffres automatiquement lorsque l’écran se verrouille ou que le Mac se met en veille.</li>
 <li><b>Revérifier chaque jour</b> : pour un coffre, choisissez <b>…</b> › <b>Réouverture</b> › <b>Verrouiller chaque jour, déverrouiller avec Touch ID</b>. Il se verrouille un jour après son ouverture et se rouvre ensuite avec votre empreinte. Sur un Mac sans Touch ID, le mot de passe de session (ou l’Apple Watch) est utilisé. Avec <b>déverrouiller avec le mot de passe du coffre</b>, le mot de passe du coffre est demandé à chaque fois.</li>
 <li><b>Changer le mot de passe</b> : <b>…</b> › <b>Changer le mot de passe du coffre…</b>. Les fichiers ne sont pas rechiffrés (seul le fichier de clé change), c’est donc immédiat. Les apps Cryptomator utilisent aussi le nouveau mot de passe. Avec <b>Supprimer la sauvegarde de l’ancien mot de passe</b> activé (par défaut), l’ancien mot de passe n’ouvre plus le coffre ; sinon une copie (<code>masterkey.cryptomator.bkup</code>) qui s’ouvre avec l’ancien mot de passe reste sur le serveur.</li>
 <li><b>Clé de récupération</b> : affichée à la création d’un coffre (plus tard : <b>…</b> › <b>Afficher la clé de récupération…</b>). En cas d’oubli du mot de passe, choisissez <b>Clé de récupération</b> dans <b>Changer le mot de passe du coffre…</b> pour en définir un nouveau. C’est une clé Moorly, différente de la clé en mots des apps Cryptomator.</li>
@@ -151,7 +151,7 @@ Moorly fonctionne aussi avec des dossiers déjà présents sur votre Mac, comme 
 <h2 id="permissions">Autorisations — pourquoi macOS vous les demande-t-il&nbsp;?</h2>
 <table>
 <tr><th>Ce que demande macOS</th><th>Pourquoi</th></tr>
-<tr><td>«&nbsp;Moorly souhaite contrôler Finder&nbsp;»</td><td>Pour enregistrer les dossiers récents et fréquents, Moorly vérifie quel dossier affiche la fenêtre du Finder au premier plan — uniquement lorsque le Finder est au premier plan, et sans jamais toucher à vos fichiers. Pour désactiver&nbsp;: <b>Réglages › Menu › Enregistrer les dossiers ouverts dans le Finder</b></td></tr>
+<tr><td>«&nbsp;Moorly souhaite contrôler Finder&nbsp;»</td><td>Pour enregistrer les dossiers récents et fréquents, Moorly vérifie quel dossier affiche la fenêtre du Finder au premier plan — uniquement lorsque le Finder est au premier plan, et sans jamais toucher à vos fichiers. Pour désactiver&nbsp;: <b>Réglages › Barre des menus › Mémoriser les dossiers ouverts dans le Finder</b></td></tr>
 <tr><td>«&nbsp;Moorly souhaite contrôler iTerm2 (Terminal)&nbsp;»</td><td>Pour envoyer une commande <code>ssh</code> lorsque vous ouvrez un serveur dans le terminal.</td></tr>
 <tr><td>Un sélecteur de dossier</td><td>Vous choisissez précisément les dossiers que Moorly peut utiliser, comme les dossiers locaux ou l’emplacement d’enregistrement d’une clé SSH.</td></tr>
 <tr><td>Notifications</td><td>Alertes de surveillance des journaux.</td></tr>

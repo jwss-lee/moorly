@@ -31,7 +31,7 @@ It can also work with folders already on your Mac, such as iCloud Drive or a Goo
 <li>Click <b>Mount</b> in the list. The connection appears under <b>Locations</b> in the Finder sidebar.</li>
 </ol>
 <div class="tip import-other"><b>Moving from another app</b>: in Manage Connections, choose <b>⋯ › Import from Other Apps</b> to bring over your server list from FileZilla, Cyberduck or Mountain Duck, Transmit, or <code>~/.ssh/config</code> in one go. SFTP servers are checked the first time you mount them.</div>
-<div class="tip icloud-sync"><b>Using several Macs</b>: turn on <b>Settings › iCloud Sync</b> and your server list appears on your other Macs signed in to the same Apple Account. To send passwords too, turn on <b>Also sync passwords and sign-ins with iCloud Keychain</b>. Each Mac mounts separately.</div>
+<div class="tip icloud-sync"><b>Using several Macs</b>: turn on <b>Settings › iCloud</b> and your server list appears on your other Macs signed in to the same Apple Account. To send passwords too, turn on <b>Also Sync Passwords and Login Info</b>. Each Mac mounts separately.</div>
 <div class="tip">Files are downloaded when you open them and uploaded when you save. Passwords and sign-in tokens are stored only in the macOS Keychain.</div>
 <h3>SFTP tips</h3>
 <ul>
@@ -45,14 +45,14 @@ It can also work with folders already on your Mac, such as iCloud Drive or a Goo
 <ul>
 <li><b>Servers:</b> the dot on each icon shows the status — green mounted, orange a problem, gray not mounted. Click a row to open the folder you last viewed. <b>…</b> has Unmount, Refresh, Analyze Disk Usage, Open in Terminal and more.</li>
 <li><b>Folders:</b> for each server, <b>★ Favorites · 🔥 Frequent · 🕘 Recent</b>. Hold the pointer over a folder and click ☆ to add or remove a favorite.</li>
-<li><b>Frequent</b> lists folders you opened at least twice in the last 30 days, most opened first. Set how many to show per server in <b>Settings › Menu</b>.</li>
+<li><b>Frequent</b> lists folders you opened at least twice in the last 30 days, most opened first. Set how many to show per server in <b>Settings › Menu Bar</b>.</li>
 <li>Folders that Moorly opens keep their history, so the Finder’s ◀ (Back) and <kbd>⌘↑</kbd> take you to the enclosing folder.</li>
-<li class="li-transfers"><b>Transfers</b>: click ⇅ at the top of the panel (or <b>Transfers…</b> in the right-click menu) to see uploads and downloads, with progress, failure reasons and <b>Try Again</b>, and per-server <b>Pause</b>. Completed transfers disappear after the period set in <b>Settings › Transfer History</b> (1 day by default); failed ones stay for up to 7 days.</li>
+<li class="li-transfers"><b>Transfers</b>: click ⇅ at the top of the panel (or <b>Transfers…</b> in the right-click menu) to see uploads and downloads, with progress, failure reasons and <b>Try Again</b>, and per-server <b>Pause</b>. Completed transfers disappear after the period set in <b>Settings › General › Keep Completed Transfers For</b> (1 day by default); failed ones stay for up to 7 days.</li>
 <li class="li-foldersync"><b>Folder Sync</b>: from a server’s <b>…</b> menu or <b>Folder Sync…</b> in the right-click menu, compare a Mac folder with a server folder and upload or download only what changed. <b>Compare</b> shows a preview first; files changed separately on the receiving side are reported as conflicts instead of being overwritten. Control-click a folder in a mounted server in Finder › <b>Moorly: Sync This Folder…</b> to open it with the server and server folder filled in; just choose the Mac folder. You can also use the <b>Sync</b> button at the bottom of the panel.</li>
 </ul>
 
 <h3 id="groups">Many servers: tree and tabs</h3>
-<p>In <b>Settings › Menu Bar Panel › View</b>, choose <b>List</b>, <b>Tree</b> or <b>Tabs</b>.</p>
+<p>In <b>Settings › Menu Bar › Show Servers As</b>, choose <b>List</b>, <b>Tree</b> or <b>Tabs</b>.</p>
 <ul>
 <li><b>Groups</b>: set a group (for example, Production or Development) in the <b>Group</b> field of the connection editor or from the server’s <b>…</b> › <b>Group</b> menu. Servers without a group are grouped automatically as <b>Server</b> (SFTP, FTP, WebDAV) and <b>Cloud</b> (S3, OneDrive, Dropbox); local folders get their own group.</li>
 <li><b>Tree</b>: collapse and expand groups and servers with ▸. Expand a server to see its favorite, frequent and recent folders right below it. Moorly remembers what you collapsed.</li>
@@ -65,13 +65,13 @@ It can also work with folders already on your Mac, such as iCloud Drive or a Goo
 <ul>
 <li><b>Drop on a folder</b> to upload it there. If a file with the same name exists, Moorly keeps both (“name 2”).</li>
 <li><b>Drop on a server title</b> to choose where to upload.</li>
-<li>To show the full list right away, change <b>Settings › Drop Panel › Style</b>.</li>
+<li>To show the full list right away, change <b>Settings › Menu Bar › Drop Panel › Style</b>.</li>
 </ul>
 
 <h2 id="local">Local folders (iCloud Drive · Google Drive · Box · shared folders)</h2>
 <p>Work with folders already on your Mac as if they were servers. They appear in Recent, Frequent and Favorites, accept dropped files, and are included in file search.</p>
 <ol>
-<li>Click <b>Settings › Local Folders › Add Folder…</b></li>
+<li>Click <b>Settings › Folder › Add Folder…</b></li>
 <li>Choose the folder and click <b>Add This Folder</b>. (macOS security requires you to choose each folder once.)</li>
 </ol>
 <table>
@@ -110,7 +110,7 @@ It can also work with folders already on your Mac, such as iCloud Drive or a Goo
 <li>Names and contents are hidden. The number of files, their approximate sizes and modification times remain visible on the server.</li>
 <li>Server-side compress, share links and live logs aren't available inside a vault (the server can't read the files).</li>
 <li>Supported: Cryptomator vault formats 7 and 8, with AES-GCM (default since Cryptomator 1.7) or AES-CTR+HMAC (older vaults). Vaults made with older Cryptomator versions open and work as they are.</li>
-<li><b>Lock</b>: in the panel, <b>…</b> next to the vault › <b>Lock Vault</b>. It's unmounted and its key is removed from this Mac, so you're asked for the password next time. In <b>Settings › Cryptomator Vault</b> you can lock vaults automatically when the screen locks or the Mac sleeps.</li>
+<li><b>Lock</b>: in the panel, <b>…</b> next to the vault › <b>Lock Vault</b>. It's unmounted and its key is removed from this Mac, so you're asked for the password next time. In <b>Settings › Vault</b> you can lock vaults automatically when the screen locks or the Mac sleeps.</li>
 <li><b>Re-verify daily</b>: choose <b>…</b> › <b>Reopening</b> › <b>Lock Daily, Unlock with Touch ID</b> for a vault. It locks a day after you unlocked it, and next time you open it with just your fingerprint. Macs without Touch ID use your Mac login password (or Apple Watch). Choose <b>Unlock with Vault Password</b> to be asked for the vault password every time.</li>
 <li><b>Change password</b>: <b>…</b> › <b>Change Vault Password…</b>. Files aren't re-encrypted (only the vault key file changes), so it's instant. The Cryptomator apps use the new password too. With <b>Delete Old Password Backup</b> on (the default), the old password no longer opens the vault; if you turn it off, a copy that opens with the old password (<code>masterkey.cryptomator.bkup</code>) stays on the server.</li>
 <li><b>Recovery key</b>: shown when you create a vault (later: <b>…</b> › <b>Show Recovery Key…</b>). If you forget the password, choose <b>Recovery key</b> in <b>Change Vault Password…</b> to set a new one. It's a Moorly key, different from the word-based recovery key in the Cryptomator apps.</li>
@@ -151,7 +151,7 @@ It can also work with folders already on your Mac, such as iCloud Drive or a Goo
 <h2 id="permissions">Permissions — why does macOS ask?</h2>
 <table>
 <tr><th>What macOS asks</th><th>Why</th></tr>
-<tr><td>“Moorly wants to control Finder”</td><td>To record recent and frequent folders, Moorly checks which folder the frontmost Finder window shows — only while Finder is in front, and it never touches your files. Turn off: <b>Settings › Menu › Record Folders Opened in Finder</b></td></tr>
+<tr><td>“Moorly wants to control Finder”</td><td>To record recent and frequent folders, Moorly checks which folder the frontmost Finder window shows — only while Finder is in front, and it never touches your files. Turn off: <b>Settings › Menu Bar › Remember Folders Opened in Finder</b></td></tr>
 <tr><td>“Moorly wants to control iTerm2 (Terminal)”</td><td>To send an <code>ssh</code> command when you open a server in the terminal.</td></tr>
 <tr><td>A folder picker</td><td>You choose exactly which folders Moorly may use, such as local folders or where to save an SSH key.</td></tr>
 <tr><td>Notifications</td><td>Log-watch alerts.</td></tr>
